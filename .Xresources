@@ -13,6 +13,9 @@ URxvt.internalBorder: 0
 URxvt.externalBorder: 0
 URxvt.geometry: 85x37
 
+URxvt.keysym.Shift-Control-C: eval:selection_to_clipboard
+URxvt.keysym.Shift-Control-V: eval:paste_clipboard
+
 ! X colors.
 *foreground:        BASE05
 *.foreground:       BASE05
@@ -122,6 +125,7 @@ URxvt.url-select.launcher: /usr/bin/xdg-open
 URxvt.url-select.underline: true
 !! keyboard-select:
 URxvt.keysym.M-Escape: perl:keyboard-select:activate
+URxvt.keyboard-select.clipboard: true
 !! resize-font
 URxvt.resize-font.smaller:	C-Down
 URxvt.resize-font.bigger:	C-Up
