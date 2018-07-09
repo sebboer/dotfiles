@@ -6,6 +6,8 @@ URxvt.cursorBlink: true
 
 ! Set depth to make transparency work.
 URxvt*depth: 32
+URxvt.transparent:   true
+URxvt.shading:       20
 
 URxvt.iso14755: false
 URxvt.iso14755_2: false
@@ -132,3 +134,14 @@ URxvt.resize-font.bigger:	C-Up
 !! Matcher
 URxvt.url-launcher:	linkhandler
 URxvt.matcher.button:	1
+
+
+! Rofi
+! State:           'bg',    'fg', 'bgalt', 'hlbg', 'hlfg'
+!rofi.color-normal: BASE00, BASE07, BASE00, BASE07, BASE00
+!rofi.color-urgent: BASE00, BASE08, BASE00, BASE08, BASE00
+!rofi.color-active: BASE00, BASE0D, BASE00, BASE0D, BASE00
+!                  'bg',    'border'
+!rofi.color-window: BASE00, BASE07
+
+
