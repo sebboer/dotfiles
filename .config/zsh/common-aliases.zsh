@@ -22,3 +22,4 @@ alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 
 # i3
 alias lock='/usr/bin/betterlockscreen -l'
+alias sound='alsamixer'
