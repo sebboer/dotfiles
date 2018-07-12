@@ -1,0 +1,5 @@
+# Dark Theme
+
+rofi.theme: ~/.cache/wal/colors-rofi-dark.rasi
+rofi.bw: 1
+rofi.opacity: 80
