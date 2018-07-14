@@ -92,7 +92,6 @@ font-1 = DejaVuSansMono\ Nerd\ Font\ Mono:style=Book:size=19;5
 font-2 = DejaVuSansMono\ Nerd\ Font\ Mono:style=Book:size=9;5
 font-3 = FontAwesome5Brands:style=Solid:pixelsize=19;5
 font-4 = FontAwesome5Free:style=Solid:pixelsize=19;5
-font-5 = MaterialIcons-Regular:style=Solid:fontformat=truetype:pixelsize=19;5
 
 modules-left = i3
 modules-right = isactive-docker isactive-bluetooth wired-network filesystem cpu temperature memory
@@ -166,7 +165,7 @@ format-padding = 5
 type = internal/cpu
 interval = 0.5
 format = <label><ramp-coreload>
-label = CPU 
+label =  CPU
 
 ramp-coreload-0 = ▁
 ramp-coreload-0-font = 1
@@ -224,7 +223,7 @@ label-warn-foreground = #f00
 [module/memory]
 type = internal/memory
 format = <label><bar-used>
-label = RAM %{T4}%{T-}
+label = RAM
 
 bar-used-width = 30
 bar-used-foreground-0 = #aaff77
@@ -331,7 +330,7 @@ fixed-values = true
 ; Default: 2
 spacing = 2
 
-label-mounted = %{T-4}%{T-} %mountpoint% %used% %percentage_used%%
+label-mounted = %{T4}%{T-} %mountpoint% %used% %percentage_used%%
 label-unmounted = %mountpoint% not mounted
 label-unmounted-foreground = ${colors.foreground-alt}
 
