@@ -47,16 +47,15 @@ border-bottom-color = ${colors.foreground-alt}
 padding-left = 2
 padding-right = 2
 
-font-0 = BitstreamVeraSansMono\ Nerd\ Font\ Mono:style=Book:size=13
-font-1 = DejaVuSansMono\ Nerd\ Font\ Mono:style=Book:size=13
+font-0 = System\ San\ Francisco\ Display\ Light:size=13
+font-1 = DejaVuSansMono\ Nerd\ Font\ Mono:style=Book:size=19
 
 ;The space left by each module to separate from each other, from left to right.
 module-margin-left = 2
 module-margin-right = 2
 
-modules-center = mpd
-
-modules-right = battery backlight pulseaudio date powermenu 
+modules-right = pulseaudio date powermenu 
+modules-center = spotify
 
 [bar/bottom]
 monitor = ${env:MONITOR:}
@@ -87,11 +86,16 @@ border-top-size = 1
 border-top-color = ${colors.foreground-alt}
 
 ; The ;5 at the End is the Vertical offset
-font-0 = BitstreamVeraSansMono\ Nerd\ Font\ Mono:style=Book:size=13;5
-font-1 = DejaVuSansMono\ Nerd\ Font\ Mono:style=Book:size=13;5
+font-0 = System\ San\ Francisco\ Display\ Light:size=13;5
+font-1 = DejaVuSansMono\ Nerd\ Font\ Mono:style=Book:size=19;5
+# For Memory Module
+font-2 = DejaVuSansMono\ Nerd\ Font\ Mono:style=Book:size=9;5
+font-3 = FontAwesome5Brands:style=Solid:pixelsize=19;5
+font-4 = FontAwesome5Free:style=Solid:pixelsize=19;5
+font-5 = MaterialIcons-Regular:style=Solid:fontformat=truetype:pixelsize=19;5
 
 modules-left = i3
-modules-right = wireless-network wired-network filesystem cpu temperature memory
+modules-right = isactive-docker isactive-bluetooth wired-network filesystem cpu temperature memory
 
 [module/i3]
 type = internal/i3
@@ -99,10 +103,10 @@ format = <label-state> <label-mode>
 index-sort = true
 wrapping-scroll = false
 
-ws-icon-0 = 1;
+ws-icon-0 = 1;
 ws-icon-1 = 2;
 ws-icon-2 = 3;
-ws-icon-9 = 10;
+ws-icon-3 = 4;
 ws-icon-default = 
 
 ;Probando
@@ -148,11 +152,21 @@ label-separator-foreground = ${self.label-focused-foreground}
 type = internal/date
 date = %%{F#878787}%A, %d %B %Y  %%{F#878787}%H:%M%%{F#666}:%%{F#878787}%S%%{F-}
 
+[module/spotify]
+type = custom/script
+interval = 1
+exec = python ~/.config/polybar/scripts/spotify_status.py -f '{artist} | {song}' -t 42
+format-prefix = " "
+format = <label>
+format-background = #1db954
+format-foreground = #FAFAFA
+format-padding = 5
+
 [module/cpu]
 type = internal/cpu
 interval = 0.5
 format = <label><ramp-coreload>
-label = CPU
+label = CPU 
 
 ramp-coreload-0 = ▁
 ramp-coreload-0-font = 1
@@ -201,16 +215,16 @@ hwmon-path = /sys/devices/virtual/hwmon/hwmon0/temp1_input
 warn-temperature = 60
 
 format = <label>
-label = %temperature%
+label = %temperature-c%
 
 format-warn = <label-warn>
-label-warn = %temperature%
+label-warn = %temperature-c%
 label-warn-foreground = #f00
 
 [module/memory]
 type = internal/memory
 format = <label><bar-used>
-label = RAM
+label = RAM %{T4}%{T-}
 
 bar-used-width = 30
 bar-used-foreground-0 = #aaff77
@@ -221,19 +235,29 @@ bar-used-indicator = |
 bar-used-indicator-font = 6
 bar-used-indicator-foreground = #ff
 bar-used-fill = ─
-bar-used-fill-font = 6
+bar-used-fill-font = 3
 bar-used-empty = ─
-bar-used-empty-font = 6
+bar-used-empty-font = 3
 bar-used-empty-foreground = #444444
 
 [module/wired-network]
 type = internal/network
-interface = eno1
+interface = enp3s0
 interval = 3.0
 
-label-connected =  %{T3}%local_ip%%{T-}
+label-connected = %{T4}%{T-} %{T1}%local_ip%%{T-}
 label-disconnected =  no connection
 label-disconnected-foreground = #66
+
+[module/isactive-bluetooth]
+type = custom/script
+exec = /home/basti/.config/polybar/scripts/isactive-bluetooth.sh
+interval = 20
+
+[module/isactive-docker]
+type = custom/script
+exec = /home/basti/.config/polybar/scripts/isactive-docker.sh
+interval = 30
 
 [module/pulseaudio]
 type = internal/pulseaudio
@@ -307,7 +331,7 @@ fixed-values = true
 ; Default: 2
 spacing = 2
 
-label-mounted = %{F#0a81f5}%mountpoint%%{F-}: %used% %percentage_used%%
+label-mounted = %{T-4}%{T-} %mountpoint% %used% %percentage_used%%
 label-unmounted = %mountpoint% not mounted
 label-unmounted-foreground = ${colors.foreground-alt}
 
