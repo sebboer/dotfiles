@@ -7,6 +7,7 @@ alias ohmyzsh="mate ~/.oh-my-zsh"
 # Pywal
 alias wal-wood="wal -q -n -a "92" -i ~/Pictures/Wallpapers/wood.jpg"
 alias wal-sunset="wal -q -n -a "92" -i ~/Pictures/Wallpapers/sunset.jpg"
+alias wal-yosemite="wal -n -a "92" -i ~/Pictures/Wallpapers/BackSlide/Yosemite-wallpaper-02-ShockBlast.jpg"
 
 
 # Exa 
