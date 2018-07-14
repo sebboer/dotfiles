@@ -147,16 +147,15 @@ assign [class="Bitwarden"] $ws3
 assign [class="TelegramDesktop"] $ws2
 assign [class="discord"] $ws2
 
-for_window [class="Spotify"] move to workspace $ws10
+for_window [class="Spotify"] move to workspace $ws4
 
 set $monMain DP-0
 set $monRight DVI-I-1
 
 workspace $ws1 output $monMain
 workspace $ws3 output $monMain
-workspace $ws10 output $monMain
+workspace $ws4 output $monMain
 workspace $ws2 output $monRight
-workspace $ws4 output $monRight
 
 # ===========================================================================================
 # Autostart
@@ -210,11 +209,21 @@ bindsym $mod+r mode "resize"
 #}
 
 bindsym $mod+Shift+x exec betterlockscreen -l
-exec_always --no-starup-id compton 
+exec_always compton 
 exec nvidia-settings --load-config-only
+
+
+# MEDIA KEYS
 bindsym XF86AudioRaiseVolume exec "amixer -q sset Master 3%+ unmute"
 bindsym XF86AudioLowerVolume exec "amixer -q sset Master 3%- unmute"
+#bindsym XF86AudioMicMute exec "amixer -q sset Capture,0 toggle"
 bindsym XF86AudioMute exec "amixer -q sset Master,0 toggle"
+bindsym XF86Display exec playerctl play-pause
+bindsym XF86MonBrightnessUp exec playerctl next
+bindsym XF86MonBrightnessDown exec playerctl previous
+bindsym XF86Tools exec "urxvt -e $SHELL -c 'nvim /home/basti/.config/i3/config; $SHELL -i'"
+bindsym XF86Explorer exec "urxvt -e $SHELL -c 'ranger; $SHELL -i'"
+bindsym XF86WLAN exec blueman-manager
 
 # =============================================================================================
 # Gaps
