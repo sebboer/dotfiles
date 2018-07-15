@@ -94,7 +94,7 @@ font-3 = FontAwesome5Brands:style=Solid:pixelsize=19;5
 font-4 = FontAwesome5Free:style=Solid:pixelsize=19;5
 
 modules-left = i3
-modules-right = isactive-docker isactive-bluetooth wired-network filesystem cpu temperature memory
+modules-right = isactive-docker bluetooth isactive-bluetooth wired-network filesystem cpu temperature memory
 
 [module/i3]
 type = internal/i3
@@ -160,6 +160,9 @@ format = <label>
 format-background = #1db954
 format-foreground = #FAFAFA
 format-padding = 5
+click-middle = playerctl play-pause
+click-left = playerctl previous
+click-right = playerctl next
 
 [module/cpu]
 type = internal/cpu
@@ -251,6 +254,12 @@ label-disconnected-foreground = #66
 [module/isactive-bluetooth]
 type = custom/script
 exec = /home/basti/.config/polybar/scripts/isactive-bluetooth.sh
+interval = 20
+
+[module/bluetooth]
+type = custom/script
+exec = ~/.config/polybar/scripts/bluetooth-names.sh
+click-left = echo "foo"
 interval = 20
 
 [module/isactive-docker]
