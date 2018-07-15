@@ -160,8 +160,8 @@ format = <label>
 format-background = #1db954
 format-foreground = #FAFAFA
 format-padding = 5
-click-middle = playerctl play-pause
-click-left = playerctl previous
+click-left = playerctl play-pause
+click-middle = playerctl previous
 click-right = playerctl next
 
 [module/cpu]
