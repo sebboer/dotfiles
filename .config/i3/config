@@ -252,9 +252,9 @@ client.placeholder      $bg     $bg     $fg  $bg       $bg
 
 client.background       $bg
 
-exec_always --no-startup-id wal -R
+exec_always --no-startup-id wal -R -n
 
-
+exec_always ~/.config/scripts/slideshow.sh
 
 # Polybar
 exec_always --no-startup-id ~/.config/polybar/launch.sh
