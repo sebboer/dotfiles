@@ -146,8 +146,10 @@ assign [class="Thunderbird"] $ws3
 assign [class="Bitwarden"] $ws3
 assign [class="TelegramDesktop"] $ws2
 assign [class="discord"] $ws2
+assign [class="Franz"] $ws2
 
 for_window [class="Spotify"] move to workspace $ws4
+for_window [class="Gnome-calculator"] floating enable
 
 set $monMain DP-0
 set $monRight DVI-I-1
