@@ -1,7 +1,7 @@
 
 # ZSH
-alias zshconfig="mate ~/.zshrc"
-alias ohmyzsh="mate ~/.oh-my-zsh"
+alias zshconfig="vim ~/.zshrc"
+alias ohmyzsh="cd ~/.oh-my-zsh"
 
 
 # Pywal
