@@ -9,4 +9,6 @@ for p in $(bt-device -l | grep -o -E '([[:xdigit:]]{1,2}:){5}[[:xdigit:]]{1,2}')
 		devices+=( "$DEV" )
 	fi
 done
-printf '%s | ' "${devices[@]:0:2}"
+if [ ${#devices[@]} -gt 0 ]; then
+	printf '%s | ' "${devices[@]:0:2}"
+fi
