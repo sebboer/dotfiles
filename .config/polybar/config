@@ -54,7 +54,7 @@ font-1 = DejaVuSansMono\ Nerd\ Font\ Mono:style=Book:size=19
 module-margin-left = 2
 module-margin-right = 2
 
-modules-right = pulseaudio date powermenu 
+modules-right = updatenotifier pulseaudio date powermenu 
 modules-center = spotify
 
 [bar/bottom]
@@ -278,9 +278,20 @@ label-volume = %percentage%
 label-muted =  muted
 label-muted-foreground = #66
 
+
 ramp-volume-0 = 
 ramp-volume-1 = 
 ramp-volume-2 = 
+
+[module/updatenotifier]
+type = custom/script
+exec = ~/.config/polybar/scripts/update-notifier.sh
+interval = 1800
+format = <label>
+format-prefix = " "
+click-left = urxvt -e $SHELL -c 'yay -Qu; yay; $SHELL -i' &
+
+
 
 [module/powermenu]
 type = custom/menu
