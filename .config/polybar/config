@@ -149,7 +149,8 @@ label-separator-foreground = ${self.label-focused-foreground}
 
 [module/date]
 type = internal/date
-date = %%{F#878787}%A, %d %B %Y  %%{F#878787}%H:%M%%{F#666}:%%{F#878787}%S%%{F-}
+format = <date>
+date =  %A, %d %B %Y  %H:%M:%S
 
 [module/spotify]
 type = custom/script
