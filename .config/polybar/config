@@ -54,7 +54,7 @@ font-1 = DejaVuSansMono\ Nerd\ Font\ Mono:style=Book:size=19
 module-margin-left = 2
 module-margin-right = 2
 
-modules-right = updatenotifier pulseaudio date powermenu 
+modules-right = redshift updatenotifier pulseaudio date powermenu 
 modules-center = spotify
 
 [bar/bottom]
@@ -164,6 +164,12 @@ format-padding = 5
 click-left = playerctl play-pause
 click-middle = playerctl previous
 click-right = playerctl next
+
+[module/redshift]
+type = custom/script
+exec = ~/.config/polybar/scripts/red.sh
+format = <label>
+interval = 30
 
 [module/cpu]
 type = internal/cpu
@@ -312,6 +318,8 @@ menu-0-1 = 
 menu-0-1-exec = menu-open-2
 menu-0-2 = 
 menu-0-2-exec = menu-open-3
+menu-0-3 = 
+menu-0-3-exec = menu-open-4
 
 menu-1-0 = 
 menu-1-0-exec = menu-open-0
@@ -327,6 +335,11 @@ menu-3-0 = 
 menu-3-0-exec = menu-open-0
 menu-3-1 = 
 menu-3-1-exec = $HOME/.config/scripts/i3exit lock
+
+menu-4-0 = 
+menu-4-0-exec = menu-open-0
+menu-4-1 = 
+menu-4-1-exec = $HOME/.config/scripts/i3exit suspend
 
 [module/clock]
 type = internal/date
