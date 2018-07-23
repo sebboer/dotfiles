@@ -1,4 +1,5 @@
 export PATH=$PATH:$HOME/.cargo/bin
+export PATH=$PATH:$HOME/.local/bin
 
 export GOPATH=$HOME/go
 export NVM_DIR="$HOME/.nvm"
