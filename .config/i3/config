@@ -29,6 +29,7 @@ font pango:System San Francisco Display 13
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
+focus_follows_mouse no
 
 # start a terminal
 bindsym $mod+Return exec urxvt
@@ -51,6 +52,7 @@ bindsym $mod+h focus left
 bindsym $mod+j focus down
 bindsym $mod+k focus up
 bindsym $mod+l focus right
+bindsym $mod+slash workspace back_and_forth
 
 # alternatively, you can use the cursor keys:
 bindsym $mod+Left focus left
