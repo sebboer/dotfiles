@@ -1,7 +1,8 @@
 #!/bin/bash
 
+if [[ $(cat ~/.config/polybar/scripts/.red-cache) -eq 1 ]]; then
 currenttime=$(date +%H)
-if [[ "$currenttime" -ge "21" ]] || [[ "$currenttime" -le "06" ]];
+if [[ "$currenttime" -ge "21" ]] || [[ "$currenttime" -le "06" ]]; 
 then
 	
 	if [[ $(pidof redshift | wc -w) -eq 0 ]];
@@ -10,6 +11,10 @@ then
 	fi
 	echo ""
 else
-	redshift -x
-	echo "1"
+	killall redshift &
+	echo ""
+fi
+else
+	killall redshift &
+	echo ""
 fi
