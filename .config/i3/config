@@ -151,6 +151,7 @@ assign [class="Bitwarden"] $ws3
 assign [class="TelegramDesktop"] $ws2
 assign [class="discord"] $ws2
 assign [class="Franz"] $ws2
+assign [class="angular-electron"] $ws10
 
 for_window [class="Spotify"] move to workspace $ws4
 for_window [class="Gnome-calculator"] floating enable
@@ -174,6 +175,9 @@ exec bitwarden
 exec urxvt
 exec telegram-desktop
 exec discord
+assign [class="URxvt" instance="canto"] $ws2
+exec --no-startup-id "urxvt -name canto -e $SHELL -c 'canto-curses; $SHELL -i'"
+
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
