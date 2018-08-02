@@ -184,7 +184,8 @@ bindsym $mod+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
-bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
+#bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
+bindsym $mod+Shift+e exec ~/.config/scripts/exit-dmenu.sh
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
@@ -227,7 +228,7 @@ exec nvidia-settings --load-config-only
 # MEDIA KEYS
 bindsym XF86AudioRaiseVolume exec "amixer -q sset Master 3%+ unmute"
 bindsym XF86AudioLowerVolume exec "amixer -q sset Master 3%- unmute"
-bindsym Print exec "amixer -q sset Capture,0 toggle"
+#bindsym Print exec "amixer -q sset Capture,0 toggle"
 bindsym XF86AudioMute exec "amixer -q sset Master,0 toggle"
 bindsym XF86Display exec playerctl play-pause
 bindsym XF86MonBrightnessUp exec playerctl next
@@ -236,6 +237,9 @@ bindsym XF86Tools exec "urxvt -e $SHELL -c 'nvim /home/basti/.config/i3/config; 
 bindsym XF86Explorer exec "urxvt -e $SHELL -c 'ranger; $SHELL -i'"
 bindsym XF86LaunchA exec dolphin
 bindsym XF86WLAN exec blueman-manager
+
+# Mount USB Devices
+bindsym $mod+Shift+F12 exec --no-startup-id ~/.config/scripts/dmenumount.sh
 
 # =============================================================================================
 # Gaps

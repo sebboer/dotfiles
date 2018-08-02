@@ -3,7 +3,7 @@
 
 mountable=$( lsblk -lp -o NAME,SIZE,LABEL,TYPE,MOUNTPOINT | grep "part $" | awk '{print $3 "\t" , $1 , "(" $2 ")" }')
 [[ "$mountable" = "" ]] && exit 1
-chosen=$(echo "$mountable" | rofi -dmenu -i -p "Mount Drive" | awk '{print $1}')
+chosen=$(echo "$mountable" | rofi -dmenu -i -p "Mount Drive" | awk '{print $2}')
 [[ "$chosen" = "" ]] && exit 1
 sudo mount "$chosen" && exit 0
 
