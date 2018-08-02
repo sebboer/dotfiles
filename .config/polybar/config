@@ -54,7 +54,7 @@ font-1 = DejaVuSansMono\ Nerd\ Font\ Mono:style=Book:size=19
 module-margin-left = 2
 module-margin-right = 2
 
-modules-right = redshift updatenotifier pulseaudio date powermenu 
+modules-right = updatenotifier pulseaudio date powermenu 
 modules-center = spotify
 
 [bar/bottom]
@@ -321,6 +321,8 @@ menu-0-2 = 
 menu-0-2-exec = menu-open-3
 menu-0-3 = 
 menu-0-3-exec = menu-open-4
+menu-0-4 = 
+menu-0-4-exec = menu-open-5
 
 menu-1-0 = 
 menu-1-0-exec = menu-open-0
@@ -341,6 +343,11 @@ menu-4-0 = 
 menu-4-0-exec = menu-open-0
 menu-4-1 = 
 menu-4-1-exec = $HOME/.config/scripts/i3exit suspend
+
+menu-5-0 = 
+menu-5-0-exec = menu-open-0
+menu-5-1 = 
+menu-5-1-exec = $HOME/.config/scripts/i3exit logout
 
 [module/clock]
 type = internal/date
