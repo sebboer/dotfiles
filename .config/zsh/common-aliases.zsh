@@ -28,3 +28,4 @@ alias polyconfig='vim ~/.config/polybar/config'
 
 #
 alias vim='nvim'
+alias gnucash='LANGUAGE=de_DE.UTF-8 LANG=de_DE.UTF-8 LC_ALL=de_DE.UTF-8 gnucash'
