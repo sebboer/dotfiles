@@ -247,6 +247,7 @@ bindsym $mod+Shift+F12 exec --no-startup-id ~/.config/scripts/dmenumount.sh
 gaps inner 10
 gaps outer 10
 smart_borders on
+smart_gaps on
 
 
 # ==============================================================================================
