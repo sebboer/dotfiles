@@ -60,3 +60,4 @@ source $ZSH/oh-my-zsh.sh
 source $HOME/.config/zsh/variables.zsh
 source $HOME/.config/zsh/common-aliases.zsh
 source $HOME/.config/zsh/path.zsh
+source $HOME/.config/zsh/common-functions.zsh

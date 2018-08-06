@@ -26,6 +26,14 @@ alias sound='alsamixer'
 alias i3config='vim ~/.config/i3/config'
 alias polyconfig='vim ~/.config/polybar/config'
 
+# Docker
+alias dk='docker'
+alias dkc='docker container'
+alias dkls='docker container ls'
+alias dkl='docker container logs'
+alias dks='docker service'
+alias dm='docker machine'
+
 #
 alias vim='nvim'
 alias gnucash='LANGUAGE=de_DE.UTF-8 LANG=de_DE.UTF-8 LC_ALL=de_DE.UTF-8 gnucash'
