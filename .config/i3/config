@@ -175,8 +175,8 @@ exec bitwarden
 exec urxvt
 exec telegram-desktop
 exec discord
-assign [class="URxvt" instance="canto"] $ws2
-exec --no-startup-id "urxvt -name canto -e $SHELL -c 'canto-curses; $SHELL -i'"
+assign [class="Feedreader"] $ws2
+exec_always feedreader
 
 
 # reload the configuration file
@@ -244,8 +244,8 @@ bindsym $mod+Shift+F12 exec --no-startup-id ~/.config/scripts/dmenumount.sh
 # =============================================================================================
 # Gaps
 # =============================================================================================
-gaps inner 10
-gaps outer 10
+gaps inner 5
+gaps outer 5
 smart_borders on
 smart_gaps on
 
