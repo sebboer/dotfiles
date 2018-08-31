@@ -33,7 +33,10 @@ alias dkls='docker container ls'
 alias dkl='docker container logs'
 alias dks='docker service'
 alias dm='docker-machine'
+alias dkco='docker-compose'
+alias startdocker='systemctl start docker'
 
 #
 alias vim='nvim'
 alias gnucash='LANGUAGE=de_DE.UTF-8 LANG=de_DE.UTF-8 LC_ALL=de_DE.UTF-8 gnucash'
+alias gnome-ctl='env XDG_CURRENT_DESKTOP=GNOME gnome-control-center'
