@@ -54,7 +54,7 @@ font-1 = DejaVuSansMono\ Nerd\ Font\ Mono:style=Book:size=19
 module-margin-left = 2
 module-margin-right = 2
 
-modules-right = updatenotifier pulseaudio date powermenu 
+modules-right = redshift updatenotifier pulseaudio date powermenu 
 modules-center = spotify
 
 [bar/bottom]
@@ -169,8 +169,8 @@ click-right = playerctl next
 type = custom/script
 exec = ~/.config/polybar/scripts/red.sh
 format = <label>
-interval = 30
-click-left = ~/.config/polybar/scripts/redshift-toggle.sh && ~/.config/polybar/scripts/red.sh
+interval = 10
+click-left = ~/.config/polybar/scripts/redshift-toggle.sh &>> ~/.config/polybar/scripts/.red-cache 
 
 [module/cpu]
 type = internal/cpu
