@@ -40,6 +40,7 @@ plugins=(
   nvm
   node
   ng
+  jsontools
 )
 
 source $ZSH/oh-my-zsh.sh
