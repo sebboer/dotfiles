@@ -3,7 +3,7 @@ configuration {
 	width: 20;
 	lines: 20;
 /*	columns: 1;*/
-	font: "MonacoB 20";
+	font-0 = Poppins Light:size=14
 /*	bw: 1;*/
 	location: 0;
 /*	padding: 5;*/
