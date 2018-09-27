@@ -47,8 +47,8 @@ border-bottom-color = ${colors.foreground-alt}
 padding-left = 2
 padding-right = 2
 
-font-0 = Poppins Light:size=14
-font-1 = DejaVuSansMono\ Nerd\ Font\ Mono:style=Book:size=19;2
+font-0 = System\ San\ Francisco\ Display\ Light:size=13
+font-1 = DejaVuSansMono\ Nerd\ Font\ Mono:style=Book:size=19
 
 ;The space left by each module to separate from each other, from left to right.
 module-margin-left = 2
@@ -86,7 +86,7 @@ border-top-size = 1
 border-top-color = ${colors.foreground-alt}
 
 ; The ;5 at the End is the Vertical offset
-font-0 = Poppins:size=14;5
+font-0 = System\ San\ Francisco\ Display\ Light:size=13;5
 font-1 = DejaVuSansMono\ Nerd\ Font\ Mono:style=Book:size=19;5
 # For Memory Module
 font-2 = DejaVuSansMono\ Nerd\ Font\ Mono:style=Book:size=9;5
