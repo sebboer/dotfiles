@@ -237,9 +237,6 @@ bindsym XF86Explorer exec "urxvt -e $SHELL -c 'ranger; $SHELL -i'"
 bindsym XF86LaunchA exec dolphin
 bindsym XF86WLAN exec blueman-manager
 
-# Mount USB Devices
-bindsym $mod+Shift+F12 exec --no-startup-id ~/.config/scripts/dmenumount.sh
-
 # =============================================================================================
 # Gaps
 # =============================================================================================
