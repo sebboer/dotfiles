@@ -169,7 +169,6 @@ workspace $ws2 output $monRight
 # Autostart
 # ===========================================================================================
 
-exec spotify
 exec thunderbird
 exec bitwarden
 exec urxvt
