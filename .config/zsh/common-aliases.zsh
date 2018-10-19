@@ -37,6 +37,7 @@ alias dks='docker service'
 alias dm='docker-machine'
 alias dkco='docker-compose'
 alias startdocker='systemctl start docker'
+alias dkstart='systemctl start docker'
 alias dkcstop='docker stop $(docker ps -a -q)'
 
 #
