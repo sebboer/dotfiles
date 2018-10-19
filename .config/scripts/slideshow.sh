@@ -1,3 +1,3 @@
 #!/bin/bash
-export DISPLAY=:1
+export DISPLAY=:0
 feh --randomize --bg-fill --no-xinerama /home/basti/Pictures/Wallpapers/BackSlide/
