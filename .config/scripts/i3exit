@@ -2,14 +2,13 @@
 
 case "$1" in
     lock)
-        /usr/bin/betterlockscreen -l
+        /usr/bin/betterlockscreen -w dim
         ;;
     logout)
         i3-msg exit
         ;;
     suspend)
-        /usr/bin/betterlockscreen -l &
-	systemctl suspend
+        /usr/bin/betterlockscreen -l & systemctl suspend
         ;;
     hibernate)
         systemctl hibernate
