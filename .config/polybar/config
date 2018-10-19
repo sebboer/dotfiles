@@ -94,7 +94,7 @@ font-3 = FontAwesome5Brands:style=Solid:pixelsize=19;5
 font-4 = FontAwesome5Free:style=Solid:pixelsize=19;5
 
 modules-left = i3
-modules-right = isactive-docker bluetooth isactive-bluetooth wired-network filesystem cpu temperature memory
+modules-right = wired-network filesystem cpu memory
 
 [module/i3]
 type = internal/i3
@@ -203,33 +203,10 @@ ramp-coreload-7 = █
 ramp-coreload-7-font = 1
 ramp-coreload-7-foreground = #ff5555
 
-[module/temperature]
-type = internal/temperature
-
-; Seconds to sleep between updates
-interval = 10
-
-; Thermal zone to use
-; To list all the zone types, run 
-; $ for i in /sys/class/thermal/thermal_zone*; do echo "$i: $(<$i/type)"; done
-thermal-zone = 0
-
-; Full path of temperature sysfs path
-; Use `sensors` to find preferred temperature source, then run
-; $ for i in /sys/class/hwmon/hwmon*/temp*_input; do echo "$(<$(dirname $i)/name): $(cat ${i%_*}_label 2>/dev/null || echo $(basename ${i%_*})) $(readlink -f $i)"; done
-; to find path to desired file
-; Default reverts to thermal zone setting
-hwmon-path = /sys/devices/virtual/hwmon/hwmon0/temp1_input
-
-; Threshold temperature to display warning label (in degrees celsius)
-warn-temperature = 60
-
-format = <label>
-label = %temperature-c%
-
-format-warn = <label-warn>
-label-warn = %temperature-c%
-label-warn-foreground = #f00
+[module/system-cpu-temppercore]
+type = custom/script
+exec = ~/.config/polybar/scripts/system-cpu-temppercore.sh
+interval = 60
 
 [module/memory]
 type = internal/memory
@@ -252,7 +229,7 @@ bar-used-empty-foreground = #444444
 
 [module/wired-network]
 type = internal/network
-interface = enp3s0
+interface = enp4s0
 interval = 3.0
 
 label-connected = %{T4}%{T-} %{T1}%local_ip%%{T-}
