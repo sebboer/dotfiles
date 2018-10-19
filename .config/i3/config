@@ -4,11 +4,10 @@
 # Should you change your keyboard layout some time, delete
 # this file and re-run i3-config-wizard(1).
 #
-
+exec xrandr --output DP-2 --primary && xrandr --output DVI-D-0 --rotate left --right-of DP-2
 # i3 config file (v4)
 #
 # Please see https://i3wm.org/docs/userguide.html for a complete reference!
-
 set $mod Mod4
 
 # Font for window titles. Will also be used by the bar unless a different font
@@ -155,10 +154,11 @@ assign [class="angular-electron"] $ws10
 
 for_window [class="Spotify"] move to workspace $ws4
 for_window [class="Gnome-calculator"] floating enable
-for_window [class="Bitwarden"] resize shrink width 10px or 10 ppt
+for_window [class="Shutter"] floating enable
+#for_window [class="Bitwarden"] resize shrink width 10px or 10 ppt
 
-set $monMain DP-0
-set $monRight DVI-I-1
+set $monMain DP-2
+set $monRight DVI-D-0
 
 workspace $ws1 output $monMain
 workspace $ws3 output $monMain
@@ -174,8 +174,7 @@ exec bitwarden
 exec urxvt
 exec telegram-desktop
 exec discord
-assign [class="Feedreader"] $ws2
-exec_always feedreader
+exec --no-startup-id dunst -config $HOME/.config/dunst/dunstrc
 
 
 # reload the configuration file
@@ -232,9 +231,10 @@ bindsym XF86AudioMute exec "amixer -q sset Master,0 toggle"
 bindsym XF86Display exec playerctl play-pause
 bindsym XF86MonBrightnessUp exec playerctl next
 bindsym XF86MonBrightnessDown exec playerctl previous
-bindsym XF86Tools exec "urxvt -e $SHELL -c 'nvim /home/basti/.config/i3/config; $SHELL -i'"
+#bindsym XF86Tools exec "urxvt -e $SHELL -c 'nvim /home/basti/.config/i3/config; $SHELL -i'"
+bindsym XF86Tools exec env XDG_CURRENT_DESKTOP="kde" systemsettings5
 bindsym XF86Explorer exec "urxvt -e $SHELL -c 'ranger; $SHELL -i'"
-bindsym XF86LaunchA exec dolphin
+bindsym XF86LaunchA exec env XDG_CURRENT_DESKTOP="kde" dolphin
 bindsym XF86WLAN exec blueman-manager
 
 # =============================================================================================
@@ -269,6 +269,7 @@ client.background       $bg
 exec_always --no-startup-id wal -R -n
 
 exec_always ~/.config/scripts/slideshow.sh
+exec --no-startup-id /usr/bin/gnome-keyring-daemon --start --components=secrets
 
 # Polybar
 exec_always --no-startup-id ~/.config/polybar/launch.sh
