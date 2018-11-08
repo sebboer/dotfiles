@@ -40,7 +40,7 @@ line-color = ${colors.background}
 border-size = 0
 border-color = #00000000
 
-border-bottom-size = 1
+border-bottom-size = 0
 border-bottom-color = ${colors.foreground-alt}
 
 ;Number of spaces to add at the beginning/end of the bar
@@ -83,7 +83,7 @@ module-margin-right = 2
 border-size = 0
 border-color = #00000000
 
-border-top-size = 1
+border-top-size = 0
 border-top-color = ${colors.foreground-alt}
 
 ; The ;5 at the End is the Vertical offset
@@ -121,7 +121,7 @@ module-margin-right = 2
 border-size = 0
 border-color = #00000000
 
-border-top-size = 1
+border-top-size = 0
 border-top-color = ${colors.foreground-alt}
 
 ; The ;5 at the End is the Vertical offset
