@@ -170,8 +170,8 @@ workspace $ws2 output $monRight
 # ===========================================================================================
 
 exec thunderbird
-exec bitwarden
-exec urxvt
+exec bitwarden-bin
+exec urxvt -e $SHELL -c 'neofetch; zsh'
 exec telegram-desktop
 exec discord
 exec --no-startup-id dunst -config $HOME/.config/dunst/dunstrc
@@ -240,10 +240,11 @@ bindsym XF86WLAN exec blueman-manager
 # =============================================================================================
 # Gaps
 # =============================================================================================
-gaps inner 5
-gaps outer 5
+gaps inner 10
+gaps outer 0
 smart_borders on
 smart_gaps on
+new_window pixel 3
 
 
 # ==============================================================================================
@@ -255,14 +256,16 @@ smart_gaps on
 set_from_resource $fg i3wm.color7 #f0f0f0
 set_from_resource $bg i3wm.color2 #f0f0f0
 set_from_resource $ac i3wm.color0 #f0f0f0
-set_from_resource $ur i3wm.color5 #ff0000
+set_from_resource $ia i3wm.color5 #ff0000
+set_from_resource $IA i3wm.color4 #ff0000
+set_from_resource $ur i3wm.color6 #db1344
 
 # class                 border  backgr. text indicator child_border
-client.focused          $bg     $ur     $fg  $bg       $ur
-client.focused_inactive $bg     $bg     $fg  $bg       $bg
-client.unfocused        $bg     $bg     $fg  $bg       $ac
-client.urgent           $bg     $bg     $fg  $bg       $bg
-client.placeholder      $bg     $bg     $fg  $bg       $bg
+client.focused          $bg     $bg     $fg  $bg       $ur
+client.focused_inactive $IA     $ia     $fg  $bg       $ac
+client.unfocused        $IA     $ia     $fg  $bg       $ac
+client.urgent           $bg     $ur     $fg  $bg       $bg
+client.placeholder      $bg     $ia     $fg  $bg       $bg
 
 client.background       $bg
 
@@ -270,6 +273,7 @@ exec_always --no-startup-id wal -R -n
 
 exec_always ~/.config/scripts/slideshow.sh
 exec --no-startup-id /usr/bin/gnome-keyring-daemon --start --components=secrets
+exec --no-startup-id sleep 3 && xfce4-power-manager
 
 # Polybar
-exec_always --no-startup-id ~/.config/polybar/launch.sh
+exec_always --no-startup-id sleep 3 && ~/.config/polybar/launch.sh 2>> ~/.config/scripts/.polybar.log
