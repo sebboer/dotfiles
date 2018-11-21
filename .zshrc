@@ -30,6 +30,7 @@ source ~/.cache/wal/colors-tty.sh
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
   git
+  pip
   docker
   cargo
   docker-machine
@@ -42,9 +43,9 @@ plugins=(
   ng
   jsontools
   aws
+  vi-mode
 )
 
-source $ZSH/oh-my-zsh.sh
 
 # Preferred editor for local and remote sessions
 # if [[ -n $SSH_CONNECTION ]]; then
@@ -59,9 +60,21 @@ source $ZSH/oh-my-zsh.sh
 # ======================================================================
 # Config Files
 # ======================================================================
+source $ZSH/oh-my-zsh.sh
 source $HOME/.config/zsh/variables.zsh
 source $HOME/.config/zsh/common-aliases.zsh
 source $HOME/.config/zsh/path.zsh
 source $HOME/.config/zsh/common-functions.zsh
 
+# ======================================================================
+# FZF
+# ======================================================================
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+# ======================================================================
+# VI MODE
+# ======================================================================
+# function in >> ~/.config/zsh/common-functions.zsh
+zle -N zle-line-init
+zle -N zle-keymap-select
+

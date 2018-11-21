@@ -12,3 +12,11 @@ dklogs() {
 
 # show all alias docker related
 dalias() { alias | grep 'docker' | sed "s/^\([^=]*\)=\(.*\)/\1 => \2/"| sed "s/['|\']//g" | sort; }
+
+#vi-mode prompt
+function zle-line-init zle-keymap-select {
+    RPS1="${${KEYMAP/vicmd/ << N }/(main|viins)/<< I }"
+    RPS2=$RPS1
+    zle reset-prompt
+}
+
