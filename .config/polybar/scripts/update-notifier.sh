@@ -1,0 +1,1 @@
+yay -Qu | wc -l
