@@ -9,4 +9,8 @@ export NVM_DIR="$HOME/.nvm"
 
 # JAVA 
 export JAVA_HOME=/usr/lib/jvm/java-8-openjdk/
-export PATH=$PATH:/usr/jvm/java-8-openjdk/bin
+export PATH=$PATH:/usr/lib/jvm/java-8-openjdk/bin
+
+# Android
+export ANDROID_SDK_HOME=$HOME/Android/Sdk/
+export PATH=$PATH:$ANDROID_SDK_HOME/emulator
