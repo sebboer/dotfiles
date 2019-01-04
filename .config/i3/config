@@ -227,7 +227,8 @@ exec nvidia-settings --load-config-only
 # MEDIA KEYS
 bindsym XF86AudioRaiseVolume exec "amixer -q sset Master 3%+ unmute"
 bindsym XF86AudioLowerVolume exec "amixer -q sset Master 3%- unmute"
-#bindsym Print exec "amixer -q sset Capture,0 toggle"
+bindsym Print exec xdotool click 8
+bindsym Shift+Print exec xdotool click 9
 bindsym XF86AudioMute exec "amixer -q sset Master,0 toggle"
 bindsym XF86Display exec playerctl play-pause
 bindsym XF86MonBrightnessUp exec playerctl next
