@@ -8,8 +8,8 @@ export NVM_DIR="$HOME/.nvm"
 [[ -s $HOME/.nvm/nvm.sh ]] && . $HOME/.nvm/nvm.sh
 
 # JAVA 
-export JAVA_HOME=/usr/lib/jvm/java-8-openjdk/
-export PATH=$PATH:/usr/lib/jvm/java-8-openjdk/bin
+export JAVA_HOME=/usr/lib/jvm/java-11-openjdk
+export PATH=$PATH:/usr/lib/jvm/java-11-openjdk/bin
 
 # Android
 export ANDROID_SDK_HOME=$HOME/Android/Sdk/
