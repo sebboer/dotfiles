@@ -133,7 +133,7 @@ font-3 = FontAwesome5Brands:style=Solid:pixelsize=19;5
 font-4 = FontAwesome5Free:style=Solid:pixelsize=19;5
 
 modules-left = i3
-modules-right = wired-network filesystem cpu memory
+modules-right = capslock wired-network filesystem cpu memory
 
 [module/i3]
 type = internal/i3
@@ -369,6 +369,13 @@ menu-5-1-exec = $HOME/.config/scripts/i3exit logout
 type = internal/date
 interval = 2
 date = %%{F#878787}%Y-%m-%d%%{F-}  %%{F#878787}%H:%M%%{F-}
+
+[module/capslock]
+type = custom/script
+exec = ~/.config/polybar/scripts/caps.sh
+format-prefix = " "
+format = <label>
+interval = 1
 
 [module/filesystem]
 type = internal/fs
