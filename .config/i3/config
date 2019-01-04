@@ -97,15 +97,10 @@ bindsym $mod+a focus parent
 # focus the child container
 #bindsym $mod+d focus child
 
-# Media player controls for Mediakeys
-bindsym XF86AudioPlay exec playerctl play-pause
-bindsym XF86AudioPause exec playerctl pause
-bindsym XF86AudioNext exec playerctl next
-bindsym XF86AudioPrev exec playerctl previous
 
-# ==========================================================================================
+# ==============================================================================================
 # Workspaces
-# ==========================================================================================
+# ==============================================================================================
 
 # Define names for default workspaces for which we configure key bindings later on.
 # We use variables to avoid repeating the names in multiple places.
@@ -166,9 +161,9 @@ workspace $ws3 output $monMain
 workspace $ws4 output $monMain
 workspace $ws2 output $monRight
 
-# ===========================================================================================
+# =============================================================================================
 # Autostart
-# ===========================================================================================
+# =============================================================================================
 
 exec thunderbird
 exec bitwarden-bin
@@ -213,18 +208,22 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
-# Start i3bar to display a workspace bar (plus the system information i3status
-# finds out, if available)
-#bar {
-#        status_command i3status
-#}
+# ==============================================================================================
+# Lockscreen
+# ==============================================================================================
 
 bindsym $mod+Shift+x exec betterlockscreen -l
 exec_always compton 
 exec nvidia-settings --load-config-only
 
+# ==============================================================================================
+# Media player controls for Mediakeys
+# ==============================================================================================
 
-# MEDIA KEYS
+bindsym XF86AudioPlay exec playerctl play-pause
+bindsym XF86AudioPause exec playerctl pause
+bindsym XF86AudioNext exec playerctl next
+bindsym XF86AudioPrev exec playerctl previous
 bindsym XF86AudioRaiseVolume exec "amixer -q sset Master 3%+ unmute"
 bindsym XF86AudioLowerVolume exec "amixer -q sset Master 3%- unmute"
 bindsym Print exec xdotool click 8
@@ -233,15 +232,15 @@ bindsym XF86AudioMute exec "amixer -q sset Master,0 toggle"
 bindsym XF86Display exec playerctl play-pause
 bindsym XF86MonBrightnessUp exec playerctl next
 bindsym XF86MonBrightnessDown exec playerctl previous
-#bindsym XF86Tools exec "urxvt -e $SHELL -c 'nvim /home/basti/.config/i3/config; $SHELL -i'"
 bindsym XF86Tools exec env XDG_CURRENT_DESKTOP="kde" systemsettings5
 bindsym XF86Explorer exec "urxvt -e $SHELL -c 'ranger; $SHELL -i'"
 bindsym XF86LaunchA exec env XDG_CURRENT_DESKTOP="kde" dolphin
 bindsym XF86WLAN exec blueman-manager
 
-# =============================================================================================
+# ==============================================================================================
 # Gaps
-# =============================================================================================
+# ==============================================================================================
+
 gaps inner 10
 gaps outer 0
 smart_borders on
@@ -255,6 +254,7 @@ new_window pixel 3
 # Set colors from Xresources
 # NOTE: The '#f0f0f0' in the lines below is the color i3 will use if
 # it fails to get colors from Xresources.
+
 set_from_resource $fg i3wm.color7 #f0f0f0
 set_from_resource $bg i3wm.color2 #f0f0f0
 set_from_resource $ac i3wm.color0 #f0f0f0
@@ -277,5 +277,8 @@ exec_always ~/.config/scripts/slideshow.sh
 exec --no-startup-id /usr/bin/gnome-keyring-daemon --start --components=secrets
 exec --no-startup-id sleep 3 && xfce4-power-manager
 
+# ==============================================================================================
 # Polybar
+# ==============================================================================================
+
 exec_always --no-startup-id sleep 3 && ~/.config/polybar/launch.sh 2>> ~/.config/scripts/.polybar.log
