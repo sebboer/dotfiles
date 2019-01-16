@@ -1,6 +1,6 @@
 #!/bin/bash
 
-query=`yay -Qu`
+query=`yay -Qu` 2> /dev/null || echo !
 if [[ $query == *"Get https://aur.archlinux.org"* ]]; then
 	echo "-"
 else
