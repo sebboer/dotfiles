@@ -12,7 +12,7 @@ alias wal-yosemite="wal -n -a "92" -i ~/Pictures/Wallpapers/MacOS/Yosemite-wallp
 # Exa 
 alias ls="exa --across"
 alias la="exa -lah"
-alias ll="exa -l"
+alias ll="exa -lh"
 alias l="exa -lah"
 alias lt="exa -Th"
 alias lg="exa -lh --git"
