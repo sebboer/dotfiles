@@ -40,6 +40,7 @@ alias dkco='docker-compose'
 alias startdocker='systemctl start docker'
 alias dkstart='systemctl start docker'
 alias dkcstop='docker stop $(docker ps -a -q)'
+alias dkrmall='docker rm $(docker ps -aq)'
 
 #
 alias vim='nvim'
