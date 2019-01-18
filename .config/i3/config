@@ -171,6 +171,7 @@ exec urxvt -e $SHELL -c 'neofetch; zsh'
 exec telegram-desktop
 exec discord
 exec --no-startup-id dunst -config $HOME/.config/dunst/dunstrc
+exec firefox-developer-edition
 
 
 # reload the configuration file
