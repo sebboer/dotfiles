@@ -10,3 +10,7 @@
 + rofi
 + zathura
 + nvim
+
+## Screenshot
+
+	![screenshot](https://raw.githubusercontent.com/sebboer/dotfiles/master/Pictures/themes/default.png)
