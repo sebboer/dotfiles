@@ -167,7 +167,7 @@ workspace $ws2 output $monRight
 
 exec thunderbird
 exec bitwarden-bin
-exec urxvt -e $SHELL -c 'neofetch; zsh'
+exec urxvt -e $SHELL -c 'neofetch; echo "Updates:"; yay -Qu; zsh'
 exec telegram-desktop
 exec discord
 exec --no-startup-id dunst -config $HOME/.config/dunst/dunstrc
