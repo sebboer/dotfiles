@@ -1,6 +1,6 @@
 #!/bin/bash
 
-if [ $(pidof redshift) > 0 ]
+if [ $(pidof redshift) -gt 0 ]
 then
 	killall redshift &
 else
