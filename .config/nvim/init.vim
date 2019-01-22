@@ -17,7 +17,7 @@ call plug#end()
 colorscheme gruvbox
 
 let g:lightline = {
-	\ 'colorscheme': 'jellybeans',
+	\ 'colorscheme': 'gruvbox',
 	\}
 
 " Config
