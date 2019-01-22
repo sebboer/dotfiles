@@ -7,6 +7,8 @@ Plug 'morhetz/gruvbox'
 Plug '~/.fzf'
 Plug 'junegunn/fzf.vim'
 Plug 'editorconfig/editorconfig-vim'
+Plug 'airblade/vim-gitgutter'
+Plug 'w0rp/ale'
 
 call plug#end()
 
@@ -25,6 +27,12 @@ set ignorecase
 set showmatch
 set autoindent
 set splitbelow splitright
+set updatetime=500
+set signcolumn=yes
 
 " Key Maps
 map <C-o> :NERDTreeToggle<CR>
+
+" --- Airline Settings ---
+set laststatus=2
+let g:airline_powerline_fonts=1
