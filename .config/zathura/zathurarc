@@ -6,3 +6,4 @@ map R rotate
 map i recolor
 map H zoom in
 map L zoom out
+set selection-clipboard clipboard
