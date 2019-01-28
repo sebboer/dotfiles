@@ -161,17 +161,6 @@ workspace $ws3 output $monMain
 workspace $ws4 output $monMain
 workspace $ws2 output $monRight
 
-# =============================================================================================
-# Autostart
-# =============================================================================================
-
-exec thunderbird
-exec bitwarden-bin
-exec urxvt -e $SHELL -c 'neofetch; echo "Updates:"; yay -Qu; zsh'
-exec telegram-desktop
-exec discord
-exec --no-startup-id dunst -config $HOME/.config/dunst/dunstrc
-exec firefox-developer-edition
 
 
 # reload the configuration file
@@ -283,3 +272,15 @@ exec --no-startup-id sleep 3 && xfce4-power-manager
 # ==============================================================================================
 
 exec_always --no-startup-id sleep 3 && ~/.config/polybar/launch.sh 2>> ~/.config/scripts/.polybar.log
+
+# =============================================================================================
+# Autostart
+# =============================================================================================
+
+exec thunderbird
+exec bitwarden-bin
+exec urxvt -e $SHELL -c 'neofetch; zsh'
+exec telegram-desktop
+exec discord
+exec --no-startup-id dunst -config $HOME/.config/dunst/dunstrc
+exec firefox-developer-edition
