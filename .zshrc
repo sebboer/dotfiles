@@ -55,7 +55,7 @@ plugins=(
 # fi
 
 # ssh
-# export SSH_KEY_PATH="~/.ssh/rsa_id"
+export SSH_KEY_PATH="~/.ssh/rsa_id"
 
 # ======================================================================
 # Config Files
