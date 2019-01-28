@@ -44,9 +44,10 @@ alias dkrmall='docker rm $(docker ps -aq)'
 
 #
 alias vim='nvim'
-alias gnucash='GKT_THEME=Adwaita LANGUAGE=de_DE.UTF-8 LANG=de_DE.UTF-8 LC_ALL=de_DE.UTF-8 gnucash'
+alias gnucash='env GKT_THEME=Adwaita:light LANGUAGE=de_DE.UTF-8 LANG=de_DE.UTF-8 LC_ALL=de_DE.UTF-8 gnucash'
 alias gnome-ctl='env XDG_CURRENT_DESKTOP=GNOME gnome-control-center'
 alias firefox='GTK_THEME="Adwaita" /usr/bin/firefox'
 alias xclipsel='xclip -selection "clipboard"'
 alias bwsession='read session; export BW_SESSION="$session"'
 alias screencast='~/.config/scripts/screen-cast.sh'
+alias zat='zathura'
