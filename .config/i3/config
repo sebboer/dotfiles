@@ -32,6 +32,8 @@ focus_follows_mouse no
 
 # start a terminal
 bindsym $mod+Return exec urxvt
+bindsym $mod+Shift+Return exec urxvt -name "Floating"
+for_window [class="URxvt" instance="Floating"] floating enable
 
 # kill focused window
 bindsym $mod+Shift+q kill
