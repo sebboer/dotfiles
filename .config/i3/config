@@ -202,7 +202,7 @@ bindsym $mod+r mode "resize"
 # Lockscreen
 # ==============================================================================================
 
-bindsym $mod+Shift+x exec betterlockscreen -l
+bindsym $mod+Shift+x exec ~/.config/scripts/i3exit lock
 exec_always compton 
 exec nvidia-settings --load-config-only
 
@@ -279,6 +279,7 @@ exec_always --no-startup-id sleep 3 && ~/.config/polybar/launch.sh 2>> ~/.config
 
 exec thunderbird
 exec bitwarden-bin
+exec urxvt -e $SHELL -c 'gcalcli calw; zsh'
 exec urxvt -e $SHELL -c 'neofetch; zsh'
 exec telegram-desktop
 exec discord
