@@ -42,6 +42,14 @@ alias dkstart='systemctl start docker'
 alias dkcstop='docker stop $(docker ps -a -q)'
 alias dkrmall='docker rm $(docker ps -aq)'
 
+# Calendar
+alias cal='gcalcli'
+alias calw='gcalcli calw'
+alias cala='gcalcli agenda'
+alias calg='gcalcli --calendar="Gemeinsamer Kalender"'
+alias calp='gcalcli --calendar=sebastian.boerakker@gmail.com'
+alias calm='gcalcli --calendar=Michelle'
+
 #
 alias vim='nvim'
 alias gnucash='env GKT_THEME=Adwaita:light LANGUAGE=de_DE.UTF-8 LANG=de_DE.UTF-8 LC_ALL=de_DE.UTF-8 gnucash'
