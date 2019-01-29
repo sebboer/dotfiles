@@ -216,8 +216,10 @@ bindsym XF86AudioPlay exec playerctl play-pause
 bindsym XF86AudioPause exec playerctl pause
 bindsym XF86AudioNext exec playerctl next
 bindsym XF86AudioPrev exec playerctl previous
-bindsym XF86AudioRaiseVolume exec "amixer -q sset Master 3%+ unmute"
-bindsym XF86AudioLowerVolume exec "amixer -q sset Master 3%- unmute"
+bindsym XF86AudioRaiseVolume exec "amixer -q sset Master 5%+ unmute"
+bindsym XF86AudioLowerVolume exec "amixer -q sset Master 5%- unmute"
+bindsym Shift+XF86AudioRaiseVolume exec "amixer -q sset Master 1%+ unmute"
+bindsym Shift+XF86AudioLowerVolume exec "amixer -q sset Master 1%- unmute"
 bindsym Print exec xdotool click 8
 bindsym Shift+Print exec xdotool click 9
 bindsym XF86AudioMute exec "amixer -q sset Master,0 toggle"
