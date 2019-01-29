@@ -42,6 +42,7 @@ plugins=(
   jsontools
   aws
   vi-mode
+  calc
 )
 
 
