@@ -45,6 +45,8 @@ plugins=(
   calc
 )
 
+# The next line enables shell command completion for gcloud.
+if [ -f '/home/basti/.google-cloud-sdk/google-cloud-sdk/completion.zsh.inc' ]; then . '/home/basti/.google-cloud-sdk/google-cloud-sdk/completion.zsh.inc'; fi
 
 # Preferred editor for local and remote sessions
 # if [[ -n $SSH_CONNECTION ]]; then
@@ -76,4 +78,6 @@ source $HOME/.config/zsh/common-functions.zsh
 # function in >> ~/.config/zsh/common-functions.zsh
 zle -N zle-line-init
 zle -N zle-keymap-select
+
+
 

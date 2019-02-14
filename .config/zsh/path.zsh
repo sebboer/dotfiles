@@ -13,3 +13,7 @@ export PATH=$PATH:$ANDROID_SDK_HOME/emulator
 
 #NVM
 export NVM_DIR="$HOME/.config/.nvm"
+
+#GOOGLE CLOUD SDK
+if [ -f '/home/basti/.google-cloud-sdk/google-cloud-sdk/path.zsh.inc' ]; then . '/home/basti/.google-cloud-sdk/google-cloud-sdk/path.zsh.inc'; fi
+
