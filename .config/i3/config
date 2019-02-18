@@ -31,9 +31,9 @@ floating_modifier $mod
 focus_follows_mouse no
 
 # start a terminal
-bindsym $mod+Return exec urxvt
-bindsym $mod+Shift+Return exec urxvt -name "Floating"
-for_window [class="URxvt" instance="Floating"] floating enable
+bindsym $mod+Return exec alacritty
+bindsym $mod+Shift+Return exec alacritty --title "Floating"
+for_window [class="Alacritty" title="Floating"] floating enable
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -283,8 +283,7 @@ exec_always --no-startup-id sleep 3 && ~/.config/polybar/launch.sh 2>> ~/.config
 
 exec thunderbird
 exec bitwarden-bin
-exec urxvt -e $SHELL -c 'gcalcli calw; zsh'
-exec urxvt -e $SHELL -c 'neofetch; zsh'
+exec alacritty
 exec telegram-desktop
 exec discord
 exec --no-startup-id dunst -config $HOME/.config/dunst/dunstrc
