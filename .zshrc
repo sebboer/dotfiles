@@ -27,22 +27,29 @@ source ~/.cache/wal/colors-tty.sh
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
-  git
-  pip
-  docker
+  aws
   cargo
-  docker-machine
   copydir
   copyfile
+  calc
+  docker
+  docker-machine
+  docker-compose
+  fzf
+  git
+  gitignore
   colored-man-pages
+  jsontools
   npm
   nvm
   node
+  nmap
   ng
-  jsontools
-  aws
+  pip
+  rust
+  sudo
   vi-mode
-  calc
+  wd
 )
 
 # The next line enables shell command completion for gcloud.
