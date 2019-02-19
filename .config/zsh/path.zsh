@@ -17,3 +17,5 @@ export NVM_DIR="$HOME/.config/.nvm"
 #GOOGLE CLOUD SDK
 if [ -f '/home/basti/.google-cloud-sdk/google-cloud-sdk/path.zsh.inc' ]; then . '/home/basti/.google-cloud-sdk/google-cloud-sdk/path.zsh.inc'; fi
 
+#Dart
+export PATH="$PATH":"$HOME/.pub-cache/bin"
