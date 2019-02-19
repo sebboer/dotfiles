@@ -48,7 +48,7 @@ plugins=(
   pip
   rust
   sudo
-  vi-mode
+  vi-mode-custom
   wd
 )
 
