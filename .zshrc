@@ -53,14 +53,7 @@ plugins=(
 )
 
 # The next line enables shell command completion for gcloud.
-if [ -f '/home/basti/.google-cloud-sdk/google-cloud-sdk/completion.zsh.inc' ]; then . '/home/basti/.google-cloud-sdk/google-cloud-sdk/completion.zsh.inc'; fi
-
-# Preferred editor for local and remote sessions
-# if [[ -n $SSH_CONNECTION ]]; then
-#   export EDITOR='vim'
-# else
-#   export EDITOR='mvim'
-# fi
+#if [ -f '/home/basti/.google-cloud-sdk/google-cloud-sdk/completion.zsh.inc' ]; then . '/home/basti/.google-cloud-sdk/google-cloud-sdk/completion.zsh.inc'; fi
 
 # ssh
 export SSH_KEY_PATH="~/.ssh/rsa_id"
