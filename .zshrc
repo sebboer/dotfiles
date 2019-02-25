@@ -79,5 +79,6 @@ source $HOME/.config/zsh/common-functions.zsh
 zle -N zle-line-init
 zle -N zle-keymap-select
 
-
+# NVM
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 
