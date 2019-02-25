@@ -12,10 +12,10 @@ export ANDROID_SDK_HOME=$HOME/Android/Sdk/
 export PATH=$PATH:$ANDROID_SDK_HOME/emulator
 
 #NVM
-export NVM_DIR="$HOME/.config/.nvm"
+export NVM_DIR="~/.config/.nvm"
 
 #GOOGLE CLOUD SDK
-if [ -f '/home/basti/.google-cloud-sdk/google-cloud-sdk/path.zsh.inc' ]; then . '/home/basti/.google-cloud-sdk/google-cloud-sdk/path.zsh.inc'; fi
+#if [ -f '/home/basti/.google-cloud-sdk/google-cloud-sdk/path.zsh.inc' ]; then . '/home/basti/.google-cloud-sdk/google-cloud-sdk/path.zsh.inc'; fi
 
 #Dart
 export PATH="$PATH":"$HOME/.pub-cache/bin"
