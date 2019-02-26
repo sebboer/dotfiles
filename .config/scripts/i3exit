@@ -2,7 +2,7 @@
 
 case "$1" in
     lock)
-	betterlockscreen -l dimblur -t "Hello "$USER"!"
+	~/.config/scripts/lock.sh
         ;;
     logout)
         i3-msg exit
@@ -11,7 +11,7 @@ case "$1" in
         betterlockscreen -s dimblur -t "Hello "$USER"!"
         ;;
     hibernate)
-        betterlockscreen -l dimblur -t "Hello "$USER"!" & systemctl hibernate
+        ~/.config/scripts/lock.sh & systemctl hibernate
         ;;
     reboot)
         systemctl reboot
