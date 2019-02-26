@@ -277,7 +277,7 @@ set_from_resource $color15 i3wm.color15
 client.focused          $bg     $color03 $color00  $bg       $color03
 client.focused_inactive $bg     $color03 $fg  	   $bg       $color04
 client.unfocused        $bg 	$bg      $fg       $bg       $bg
-client.urgent           $bg 	$color06 $color00  $bg       $bg
+client.urgent           $bg 	$color06 $fg       $bg       $bg
 client.placeholder      $bg     $bg      $fg       $bg       $bg
 
 client.background       $bg
