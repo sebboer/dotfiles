@@ -9,6 +9,7 @@ Plug 'junegunn/fzf.vim'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'airblade/vim-gitgutter'
 Plug 'w0rp/ale'
+Plug 'chrisbra/Colorizer'
 
 call plug#end()
 
