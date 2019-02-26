@@ -6,7 +6,7 @@ if [[ $UID -eq 0 ]]; then
     local user_host='%{$terminfo[bold]$fg[red]%}%n@%m%{$reset_color%}'
     local user_symbol='#'
 else
-    local user_host='%{$terminfo[bold]$fg[green]%}%n@%m%{$reset_color%}'
+    local user_host='%{$terminfo[bold]$fg[yellow]%}%n@%m%{$reset_color%}'
     local user_symbol='λ'
 fi
 

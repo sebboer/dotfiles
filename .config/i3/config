@@ -250,23 +250,34 @@ new_window pixel 3
 # NOTE: The '#f0f0f0' in the lines below is the color i3 will use if
 # it fails to get colors from Xresources.
 
-set_from_resource $fg i3wm.color7 #f0f0f0
-set_from_resource $bg i3wm.color2 #f0f0f0
-set_from_resource $ac i3wm.color0 #f0f0f0
-set_from_resource $ia i3wm.color5 #ff0000
-set_from_resource $IA i3wm.color4 #ff0000
-set_from_resource $ur i3wm.color6 #db1344
+set_from_resource $fg i3wm.foreground #f0f0f0
+set_from_resource $bg i3wm.background #f0f0f0
 
-# class                 border  backgr. text indicator child_border
-client.focused          $bg     $bg     $fg  $bg       $ur
-client.focused_inactive $IA     $ia     $fg  $bg       $ac
-client.unfocused        $IA     $ia     $fg  $bg       $ac
-client.urgent           $bg     $ur     $fg  $bg       $bg
-client.placeholder      $bg     $ia     $fg  $bg       $bg
+set_from_resource $color00 i3wm.color0
+set_from_resource $color01 i3wm.color1
+set_from_resource $color02 i3wm.color2
+set_from_resource $color03 i3wm.color3
+set_from_resource $color04 i3wm.color4
+set_from_resource $color05 i3wm.color5
+set_from_resource $color06 i3wm.color6
+set_from_resource $color07 i3wm.color7
+set_from_resource $color08 i3wm.color8
+set_from_resource $color09 i3wm.color9
+set_from_resource $color10 i3wm.color10
+set_from_resource $color11 i3wm.color11
+set_from_resource $color12 i3wm.color12
+set_from_resource $color13 i3wm.color13
+set_from_resource $color14 i3wm.color14
+set_from_resource $color15 i3wm.color15
+
+# class                 border  backgr.  text      indicator child_border
+client.focused          $bg     $color03 $color00  $bg       $color03
+client.focused_inactive $bg     $color03 $fg  	   $bg       $color04
+client.unfocused        $bg 	$bg      $fg       $bg       $bg
+client.urgent           $bg 	$color06 $color00  $bg       $bg
+client.placeholder      $bg     $bg      $fg       $bg       $bg
 
 client.background       $bg
-
-exec_always --no-startup-id wal -R -n
 
 exec_always ~/.config/scripts/slideshow.sh
 exec --no-startup-id /usr/bin/gnome-keyring-daemon --start --components=secrets

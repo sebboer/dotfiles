@@ -7,7 +7,7 @@ background = ${xrdb:color0:#000000}
 background-alt = ${xrdb:color1:#000000}
 
 ;General font color
-foreground = ${xrdb:color5:#ccffff}
+foreground = ${xrdb:color3:#ccffff}
 
 ;Color of the font when clicking on a module, for example in the current sound module, clicking changes it to "sound muted" 
 ;with a darker color to indicate that there is no sound.
