@@ -225,6 +225,7 @@ bindsym Shift+XF86AudioRaiseVolume exec "amixer -q sset Master 1%+ unmute"
 bindsym Shift+XF86AudioLowerVolume exec "amixer -q sset Master 1%- unmute"
 bindsym Print exec xdotool click 8
 bindsym Shift+Print exec xdotool click 9
+bindsym $mod+Print --release exec --no-startup-id i3-scrot -s
 bindsym XF86AudioMute exec "amixer -q sset Master,0 toggle"
 bindsym XF86Display exec playerctl play-pause
 bindsym XF86MonBrightnessUp exec playerctl next
