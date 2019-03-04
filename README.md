@@ -5,6 +5,7 @@
 + i3 (i3-gaps)
 + zsh
 + ranger
++ alacritty
 + Xresources
 + polybar (with scripts)
 + rofi
