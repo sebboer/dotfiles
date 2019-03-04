@@ -290,7 +290,7 @@ exec --no-startup-id sleep 3 && xfce4-power-manager
 # Polybar
 # ==============================================================================================
 
-exec_always --no-startup-id sleep 2 && ~/.config/polybar/launch.sh 2>> ~/.config/scripts/.polybar.log
+exec_always --no-startup-id ~/.config/polybar/launch.sh 2>> ~/.config/scripts/.polybar.log
 
 # =============================================================================================
 # Autostart
