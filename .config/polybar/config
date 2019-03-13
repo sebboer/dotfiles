@@ -133,7 +133,7 @@ font-3 = FontAwesome5Brands:style=Solid:pixelsize=19;5
 font-4 = FontAwesome5Free:style=Solid:pixelsize=19;5
 
 modules-left = i3
-modules-right = capslock wired-network filesystem cpu memory
+modules-right = capslock wired-network filesystem cpu system-cpu-temppercore memory
 
 [module/i3]
 type = internal/i3
@@ -245,7 +245,7 @@ ramp-coreload-7-foreground = #ff5555
 [module/system-cpu-temppercore]
 type = custom/script
 exec = ~/.config/polybar/scripts/system-cpu-temppercore.sh
-interval = 60
+interval = 5
 
 [module/memory]
 type = internal/memory
