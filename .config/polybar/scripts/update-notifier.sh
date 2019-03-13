@@ -1,4 +1,4 @@
 #!/bin/bash
 
-echo $(yay -Qu 2> /dev/null | wc -l)
+echo "$(yay -Qu --repo | wc -l) | $(yay -Qu --aur | wc -l)"
 
