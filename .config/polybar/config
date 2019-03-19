@@ -313,7 +313,7 @@ exec = ~/.config/polybar/scripts/update-notifier.sh
 interval = 600
 format = <label>
 format-prefix = " "
-click-left = urxvt -e $SHELL -c 'yay -Qu; yay; $SHELL -i' &
+click-left = alacritty -e ~/.config/scripts/update-routine.sh &
 
 
 
