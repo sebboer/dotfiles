@@ -146,7 +146,7 @@ assign [class="Thunderbird"] $ws3
 assign [class="Bitwarden"] $ws3
 assign [class="TelegramDesktop"] $ws2
 assign [class="discord"] $ws2
-assign [class="Franz"] $ws2
+assign [class="Signal"] $ws3
 assign [class="angular-electron"] $ws10
 
 for_window [class="Spotify"] move to workspace $ws4
@@ -301,4 +301,5 @@ exec bitwarden-bin
 exec alacritty
 exec telegram-desktop
 exec discord
+exec alacritty -e "~/.config/scripts/startup.sh"
 exec --no-startup-id dunst -config $HOME/.config/dunst/dunstrc
