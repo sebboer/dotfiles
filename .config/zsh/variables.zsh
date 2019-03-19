@@ -10,4 +10,5 @@ export FZF_DEFAULT_COMMAND='ag --hidden --ignore .git -l -g ""'
 
 # NNN
 export DISABLE_FILE_OPEN_ON_NAV=1
+export NNN_RESTRICT_NAV_OPEN=1
 export NNN_COPIER=$HOME/.config/nnn/copier.sh
