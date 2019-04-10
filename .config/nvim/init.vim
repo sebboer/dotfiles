@@ -26,6 +26,8 @@ let g:lightline = {
 
 " Config
 syntax on
+set tabstop=2
+set softtabstop=0
 set number relativenumber
 set ignorecase
 set showmatch
