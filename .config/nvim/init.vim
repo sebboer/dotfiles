@@ -10,6 +10,9 @@ Plug 'editorconfig/editorconfig-vim'
 Plug 'airblade/vim-gitgutter'
 Plug 'w0rp/ale'
 Plug 'chrisbra/Colorizer'
+Plug 'vim-pandoc/vim-rmarkdown'
+Plug 'vim-pandoc/vim-pandoc'
+Plug 'vim-pandoc/vim-pandoc-syntax'
 
 call plug#end()
 
@@ -33,6 +36,12 @@ set signcolumn=yes
 
 " Key Maps
 map <C-o> :NERDTreeToggle<CR>
+nnoremap <C-h> :-tabnext<CR>
+nnoremap <C-l> :tabnext<CR>
+nnoremap <C-t> :tabnew<space>
+
+autocmd Filetype rmd,rmarkdown map <F5> :RMarkdown pdf<CR>
+autocmd BufRead,BufNewFile *.rmd set filetype=rmarkdown
 
 " --- Airline Settings ---
 set laststatus=2
