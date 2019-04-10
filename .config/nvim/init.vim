@@ -28,6 +28,7 @@ let g:lightline = {
 syntax on
 set tabstop=2
 set softtabstop=0
+set shiftwidth=2
 set number relativenumber
 set ignorecase
 set showmatch
@@ -48,3 +49,6 @@ autocmd BufRead,BufNewFile *.rmd set filetype=rmarkdown
 " --- Airline Settings ---
 set laststatus=2
 let g:airline_powerline_fonts=1
+
+" --- NERDTree Settings ---
+let NERDTreeMapOpenInTab='<ENTER>'
