@@ -13,6 +13,7 @@ Plug 'chrisbra/Colorizer'
 Plug 'vim-pandoc/vim-rmarkdown'
 Plug 'vim-pandoc/vim-pandoc'
 Plug 'vim-pandoc/vim-pandoc-syntax'
+Plug 'lervag/vimtex'
 
 call plug#end()
 
@@ -39,11 +40,12 @@ set signcolumn=yes
 
 " Key Maps
 map <C-o> :NERDTreeToggle<CR>
-nnoremap <C-h> :-tabnext<CR>
+nnoremap <C-h> :tabprevious<CR>
 nnoremap <C-l> :tabnext<CR>
 nnoremap <C-t> :tabnew<space>
 
 autocmd Filetype rmd,rmarkdown map <F5> :RMarkdown pdf<CR>
+autocmd Filetype tex map <F10> :VimtexCompile <CR>
 autocmd BufRead,BufNewFile *.rmd set filetype=rmarkdown
 
 " --- Airline Settings ---
@@ -52,3 +54,6 @@ let g:airline_powerline_fonts=1
 
 " --- NERDTree Settings ---
 let NERDTreeMapOpenInTab='<ENTER>'
+
+" --- vimtex Settings ---
+let g:vimtex_view_method = 'zathura'
