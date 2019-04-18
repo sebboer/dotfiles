@@ -20,3 +20,11 @@ function zle-line-init zle-keymap-select {
     zle reset-prompt
 }
 
+
+ffmpeg-no-sound() {
+	ffmpeg -i $1 -c copy -an "no-sound"$1
+}
+
+ffmpeg-extract-sound() {
+	ffmpeg -i $1 -vn -acodec copy output-audio.aac
+}
