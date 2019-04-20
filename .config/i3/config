@@ -97,6 +97,10 @@ bindsym $mod+space focus mode_toggle
 # focus the parent container
 bindsym $mod+a focus parent
 
+# scratchpad commands
+bindsym $mod+minus move scratchpad
+bindsym $mod+plus scratchpad show
+
 # focus the child container
 #bindsym $mod+d focus child
 
