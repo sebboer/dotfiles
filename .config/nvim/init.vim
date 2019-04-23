@@ -14,6 +14,7 @@ Plug 'vim-pandoc/vim-rmarkdown'
 Plug 'vim-pandoc/vim-pandoc'
 Plug 'vim-pandoc/vim-pandoc-syntax'
 Plug 'lervag/vimtex'
+Plug 'mcchrish/nnn.vim'
 
 call plug#end()
 
@@ -39,7 +40,7 @@ set updatetime=500
 set signcolumn=yes
 
 " Key Maps
-map <C-o> :NERDTreeToggle<CR>
+nnoremap <C-n> :NnnPicker '%:p:h'<CR>
 nnoremap <C-h> :tabprevious<CR>
 nnoremap <C-l> :tabnext<CR>
 nnoremap <C-t> :tabnew<space>
@@ -52,8 +53,9 @@ autocmd BufRead,BufNewFile *.rmd set filetype=rmarkdown
 set laststatus=2
 let g:airline_powerline_fonts=1
 
-" --- NERDTree Settings ---
-let NERDTreeMapOpenInTab='<ENTER>'
-
 " --- vimtex Settings ---
 let g:vimtex_view_method = 'zathura'
+
+" --- nnn Settings ---
+let g:nnn#layout = { 'left': '~40%' } " or right, up, down<Paste>
+let g:nnn#action = { '<c-t>': 'tab split'}
