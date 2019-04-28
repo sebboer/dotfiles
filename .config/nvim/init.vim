@@ -48,6 +48,10 @@ nnoremap <C-t> :tabnew<space>
 autocmd Filetype rmd,rmarkdown map <F5> :RMarkdown pdf<CR>
 autocmd Filetype tex map <F10> :VimtexCompile <CR>
 autocmd BufRead,BufNewFile *.rmd set filetype=rmarkdown
+map <C-c> "+y
+map <C-a> ggVG
+map <C-v> "+gP
+
 
 " --- Airline Settings ---
 set laststatus=2
