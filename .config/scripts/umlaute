@@ -14,4 +14,4 @@ case "$1" in
     exit 2
 esac
 
-echo $char | xclip -selection "clipboard"
+echo -n $char | xclip -selection "clipboard"
