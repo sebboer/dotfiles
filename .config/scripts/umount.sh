@@ -1,0 +1,7 @@
+#!/bin/bash
+
+umount=$(lsblk -Jp | jq '.blockdevices[] | select(.children!=null) | .children[] | select(.mountpoint!=null) | select(.mountpoint|startswith("/home/basti")) | [.name, .mountpoint, .label, .size] | join(" ")'  -r | rofi -dmenu -i -p "Umount Disk" | awk '{print $2}')
+[[ "$umount" = "" ]] && exit 1
+
+sudo umount $umount
+
