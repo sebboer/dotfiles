@@ -64,3 +64,5 @@ alias img='sxiv'
 alias mutt='neomutt'
 alias cp='/usr/local/bin/cpg -g'
 alias mv='/usr/local/bin/mvg -g'
+alias du='du -a -h --max-depth=1 | sort -n'
+
