@@ -159,6 +159,8 @@ for_window [class="Gnome-calculator"] floating enable
 for_window [class="Shutter"] floating enable
 for_window [class="Lampe-gtk"] floating enable
 for_window [class="JetBrains Toolbox"] floating enable
+for_window [class="jetBrains Toolbox"] floating enable
+for_window [class="Blueman-manager"] floating enable
 #for_window [class="Bitwarden"] resize shrink width 10px or 10 ppt
 
 set $monMain DP-2
