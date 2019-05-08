@@ -28,3 +28,7 @@ ffmpeg-no-sound() {
 ffmpeg-extract-sound() {
 	ffmpeg -i $1 -vn -acodec copy output-audio.aac
 }
+
+wget-recursive() {
+	wget --recursive --no-parent -e robots=off $1
+}
