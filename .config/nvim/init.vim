@@ -1,6 +1,7 @@
 
 call plug#begin('~/.local/share/nvim/plugged')
 
+Plug 'rust-lang/rust.vim'
 Plug 'PotatoesMaster/i3-vim-syntax'
 Plug 'itchyny/lightline.vim'
 Plug 'morhetz/gruvbox'
@@ -38,6 +39,7 @@ set autoindent
 set splitbelow splitright
 set updatetime=500
 set signcolumn=yes
+set ttimeoutlen=100
 
 " Key Maps
 nnoremap <C-n> :NnnPicker '%:p:h'<CR>
@@ -63,3 +65,6 @@ let g:vimtex_view_method = 'zathura'
 " --- nnn Settings ---
 let g:nnn#layout = { 'left': '~40%' } " or right, up, down<Paste>
 let g:nnn#action = { '<c-t>': 'tab split'}
+
+" rust.vim settings
+let g:rustfmt_autosave = 1
