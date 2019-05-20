@@ -310,5 +310,5 @@ exec bitwarden-bin
 exec alacritty
 exec telegram-desktop
 exec discord
-exec alacritty -e "~/.config/scripts/startup.sh"
+exec alacritty -e "tmux"
 exec --no-startup-id dunst -config $HOME/.config/dunst/dunstrc
