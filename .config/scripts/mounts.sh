@@ -1,6 +1,6 @@
 #!/bin/zsh
 
-mountpoint=$(lsblk -Jp | jq '.blockdevices[] | select(.children!=null) | .children[] | select(.type=="part") | select(.mountpoint==null) | select(.size|endswith("G")) | [.name, .size, .label] | join(" ")' -r | rofi -dmenu -i -l 10 -p "Mount Disk" | awk '{print $1}')
+mountpoint=$(lsblk -Jp | jq ' .blockdevices[] | select(.children!=null) | .children[] | select(.type=="part") | select(.mountpoint==null) | select(.size|test(".T|G")) | [.name, .size, .label] | join(" ")' -r | rofi -dmenu -i -l 10 -p "Mount Disk" | awk '{print $1}')
 
 [[ "$mountpoint" = "" ]] && exit 1
 mountdirs=$(exa -l ~/mnt | awk '{print $7}' | grep -v "nas")
