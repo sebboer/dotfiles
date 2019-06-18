@@ -306,8 +306,8 @@ exec_always --no-startup-id ~/.config/polybar/launch.sh 2>> ~/.config/scripts/.p
 
 exec thunderbird
 exec bitwarden-bin
-exec alacritty
 exec telegram-desktop
 exec discord
+exec signal-desktop
 exec alacritty -e "tmux"
 exec --no-startup-id dunst -config $HOME/.config/dunst/dunstrc
