@@ -149,19 +149,18 @@ bindsym $mod+Shift+0 move container to workspace $ws10
 # Windows to open on specific Workspace
 assign [class="Thunderbird"] $ws3
 assign [class="Bitwarden"] $ws3
-assign [class="TelegramDesktop"] $ws2
-assign [class="discord"] $ws2
-assign [class="Signal"] $ws3
+assign [class="TelegramDesktop"] $ws4
+assign [class="discord"] $ws4
+assign [class="Signal"] $ws4
 assign [class="angular-electron"] $ws10
 
-for_window [class="Spotify"] move to workspace $ws4
+for_window [class="Spotify"] move to workspace $ws5
 for_window [class="Gnome-calculator"] floating enable
 for_window [class="Shutter"] floating enable
 for_window [class="Lampe-gtk"] floating enable
 for_window [class="JetBrains Toolbox"] floating enable
-for_window [class="jetBrains Toolbox"] floating enable
+for_window [class="jetbrains-toolbox"] floating enable
 for_window [class="Blueman-manager"] floating enable
-#for_window [class="Bitwarden"] resize shrink width 10px or 10 ppt
 
 set $monMain DP-2
 set $monRight DVI-D-0
@@ -169,7 +168,7 @@ set $monRight DVI-D-0
 workspace $ws1 output $monMain
 workspace $ws3 output $monMain
 workspace $ws4 output $monMain
-workspace $ws2 output $monRight
+workspace $ws2 output $monMain
 
 
 
