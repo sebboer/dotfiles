@@ -216,7 +216,7 @@ bindsym $mod+r mode "resize"
 # ==============================================================================================
 
 bindsym $mod+Shift+x exec ~/.config/scripts/i3exit lock
-exec_always compton 
+exec_always --no-startup-id compton --blur-background --blur-method kawase --blur-strength 8 --backend glx
 exec nvidia-settings --load-config-only
 
 # ==============================================================================================
