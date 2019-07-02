@@ -181,8 +181,8 @@ bindsym $mod+Shift+r restart
 bindsym $mod+Shift+e exec ~/.config/scripts/exit-dmenu.sh
 
 bindsym $mod+Shift+t exec ~/.config/scripts/re-theme-changer.sh
-bindsym $mod+Shift+m exec ~/.config/scripts/mounts.sh
-bindsym $mod+Shift+u exec ~/.config/scripts/umount.sh
+bindsym $mod+Shift+m exec ~/.config/scripts/mount/mounts.sh
+bindsym $mod+Shift+u exec ~/.config/scripts/mount/umount.sh
 
 # resize window (you can also use the mouse for that)
 mode "resize" {

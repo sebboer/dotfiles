@@ -13,3 +13,4 @@ if [[ ! -d "$where" ]]; then
 fi
 
 sudo mount $mountpoint $where && notify-send -a Mounter "$mountpoint mounted to $where."
+
