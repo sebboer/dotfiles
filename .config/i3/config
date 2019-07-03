@@ -161,6 +161,7 @@ for_window [class="Lampe-gtk"] floating enable
 for_window [class="JetBrains Toolbox"] floating enable
 for_window [class="jetbrains-toolbox"] floating enable
 for_window [class="Blueman-manager"] floating enable
+for_window [class="mpv"] floating enable
 
 set $monMain DP-2
 set $monRight DVI-D-0
