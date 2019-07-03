@@ -1,5 +1,5 @@
 configuration {
-/*	modi: "window,run,ssh";*/
+	modi: "window,run,ssh,drun";
 	width: 35;
 	lines: 20;
 /*	columns: 1;*/
@@ -50,7 +50,7 @@ configuration {
 /*	window-format: "{w}    {i}{c}   {t}";*/
 /*	click-to-exit: true;*/
 /*	show-match: true;*/
-	theme: "~/.config/themes/theme-rofi.rasi";
+	theme: "~/.config/rofi/themes/gruvbox-dark.rasi";
 /*	color-normal: ;*/
 /*	color-urgent: ;*/
 /*	color-active: ;*/
