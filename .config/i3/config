@@ -101,6 +101,9 @@ bindsym $mod+a focus parent
 bindsym $mod+minus move scratchpad
 bindsym $mod+plus scratchpad show
 
+# set window sticky
+bindsym $mod+Shift+w sticky toggle
+
 # focus the child container
 #bindsym $mod+d focus child
 
