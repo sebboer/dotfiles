@@ -1,6 +1,6 @@
 #!/bin/zsh
 
-mount=$(echo "nas-video\nnas-home\n" | rofi -dmenu -i -l 10 -p "NFS Mount")
+mount=$(echo "nas-video\nnas-home" | rofi -dmenu -i -l 10 -p "NFS Mount")
 
 case "$mount" in
 	nas-video)
