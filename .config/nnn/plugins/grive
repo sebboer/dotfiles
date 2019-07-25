@@ -4,5 +4,5 @@
 #
 # Author: sebboer
 
-cd /home/basti/googledrive/
+cd $HOME/googledrive/
 grive
