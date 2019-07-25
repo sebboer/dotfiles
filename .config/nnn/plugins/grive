@@ -1,0 +1,9 @@
+#!/usr/bin/env sh
+
+# Description: Open images in current directory in sxiv
+#
+# Shell: POSIX compliant
+# Author: sebboer
+
+cd /home/basti/googledrive/
+grive
