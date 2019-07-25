@@ -1,10 +1,9 @@
 #!/usr/bin/env sh
 
-# Description: View a file in hex
+# Description: View a file in hexyl
 # Requires: xxd and $PAGER
 #
-# Shell: POSIX compliant
-# Author: Arun Prakash Jana
+# Author: sebboer
 
 if ! [ -z "$1" ]; then
     hexyl "$1" | $PAGER
