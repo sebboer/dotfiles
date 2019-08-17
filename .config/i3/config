@@ -309,7 +309,7 @@ exec_always --no-startup-id ~/.config/polybar/launch.sh 2>> ~/.config/scripts/.p
 # =============================================================================================
 
 exec thunderbird
-exec bitwarden-bin
+exec bitwarden
 exec telegram-desktop
 exec discord
 exec signal-desktop
