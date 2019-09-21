@@ -14,4 +14,4 @@ export NNN_RESTRICT_NAV_OPEN=1
 export NNN_COPIER=$HOME/.config/nnn/copier.sh
 export NNN_CONTEXT_COLORS='3254'
 export NNN_OPS_PROG=1
-export NNN_BMS='j:~/Downloads/JD;g:~/googledrive;m:~/mnt;s:~/googledrive/Studium;d:~/Downloads;'
+export NNN_BMS='j:~/Downloads/JD;g:~/googledrive;m:~/mnt;s:~/googledrive/Studium;d:~/Downloads;p:~/Pictures;w:~/workspace;v:~/Videos;'
