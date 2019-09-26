@@ -1,0 +1,10 @@
+#!/usr/bin/env sh
+
+# Description: Open images in current directory in sxiv
+#
+# Shell: POSIX compliant
+# Author: Sebastian Boerakker
+
+if ! [ -z "$1" ]; then
+    mpv "$1" >/dev/null 2>&1 &
+fi
