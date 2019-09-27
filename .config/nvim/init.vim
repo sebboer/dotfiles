@@ -16,6 +16,7 @@ Plug 'vim-pandoc/vim-pandoc'
 Plug 'vim-pandoc/vim-pandoc-syntax'
 Plug 'lervag/vimtex'
 Plug 'mcchrish/nnn.vim'
+Plug 'scrooloose/nerdcommenter'
 
 call plug#end()
 
@@ -68,3 +69,6 @@ let g:nnn#action = { '<c-t>': 'tab split'}
 
 " rust.vim settings
 let g:rustfmt_autosave = 1
+
+" --- NERDCommenter ---
+
