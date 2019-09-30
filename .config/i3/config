@@ -296,7 +296,8 @@ mode "resize" {
 }
 
 # Lock screen
-bindsym $mod+Shift+x exec --no-startup-id blurlock
+#bindsym $mod+Shift+x exec --no-startup-id blurlock
+bindsym $mod+Shift+x exec ~/.config/scripts/i3exit lock
 #bindsym $mod+Shift+x exec ~/.config/scripts/i3exit lock
 #exec --no-startup-id compton --blur-background --blur-method kawase --blur-strength 8 --backend glx
 
