@@ -3,12 +3,6 @@
 alias zshconfig="vim ~/.zshrc"
 alias ohmyzsh="cd ~/.oh-my-zsh"
 
-
-# Pywal
-alias wal-wood="wal -q -n -a "92" -i ~/Pictures/Wallpapers/wood.jpg"
-alias wal-sunset="wal -q -n -a "92" -i ~/Pictures/Wallpapers/sunset.jpg"
-alias wal-yosemite="wal -n -a "92" -i ~/Pictures/Wallpapers/MacOS/Yosemite-wallpaper-02-ShockBlast.jpg"
-
 # Exa 
 alias ls="exa --across"
 alias la="exa -lah"
@@ -52,9 +46,6 @@ alias calm='gcalcli --calendar=Michelle'
 
 #
 alias vim='nvim'
-alias gnucash='env GKT_THEME=Adwaita:light LANGUAGE=de_DE.UTF-8 LANG=de_DE.UTF-8 LC_ALL=de_DE.UTF-8 gnucash'
-alias gnome-ctl='env XDG_CURRENT_DESKTOP=GNOME gnome-control-center'
-alias firefox='GTK_THEME="Adwaita" /usr/bin/firefox-developer-edition'
 alias xclipsel='xclip -selection "clipboard"'
 alias bwsession='read session; export BW_SESSION="$session"'
 alias screencast='~/.config/scripts/screen-cast.sh'
