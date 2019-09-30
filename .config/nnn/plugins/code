@@ -1,0 +1,10 @@
+#!/usr/bin/env sh
+
+# Description: Open a file/directory in Visual Studio Code
+# Requires: vs-code
+#
+# Author: sebboer
+
+if ! [ -z "$1" ]; then
+    code "$1"
+fi
