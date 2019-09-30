@@ -54,7 +54,7 @@ source $HOME/.config/zsh/variables.zsh
 source $HOME/.config/zsh/common-aliases.zsh
 source $HOME/.config/zsh/path.zsh
 source $HOME/.config/zsh/common-functions.zsh
-source $HOME/.config/zsh/secret-variables.zsh
+#source $HOME/.config/zsh/secret-variables.zsh
 
 # ======================================================================
 # FZF
