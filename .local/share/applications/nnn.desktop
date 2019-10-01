@@ -1,0 +1,13 @@
+[Desktop Entry]
+Name=nnn
+GenericName=File Manager
+Comment=The missing terminal file manager for X
+TryExec=nnn
+Exec=nnn -d
+Terminal=true
+Type=Application
+Keywords=Text;editor;
+Icon=system-file-manager
+Categories=Utility;FileManager;
+StartupNotify=false
+MimeType=inode/directory=nnn.desktop
