@@ -16,7 +16,7 @@ hide_edge_borders none
 
 # change borders
 bindsym $mod+u border none
-bindsym $mod+y border pixel 1
+bindsym $mod+y border pixel 5
 bindsym $mod+n border normal
 
 # Font for window titles. Will also be used by the bar unless a different font
@@ -389,16 +389,15 @@ bar {
 	strip_workspace_numbers yes
 
     colors {
-        background #222D31
-        statusline #F9FAF9
-        separator  #454947
+        background #3c3836
+				statusline #ebdbb2
+				separator  #666666
 
-#                      border  backgr. text
-        focused_workspace  #F9FAF9 #16a085 #292F34
-        active_workspace   #595B5B #353836 #FDF6E3
-        inactive_workspace #595B5B #222D31 #EEE8D5
-        binding_mode       #16a085 #2C2C2C #F9FAF9
-        urgent_workspace   #16a085 #FDF6E3 #E5201D
+		
+				focused_workspace  #458588 #458588 #ebdbb2
+				active_workspace   #83a598 #83a598 #ebdbb2
+				inactive_workspace #504945 #504945 #ebdbb2
+				urgent_workspace   #cc241d #cc241d #504945
     }
 }
 
@@ -407,13 +406,13 @@ bindsym $mod+m bar mode toggle
 
 # Theme colors
 # class                   border  backgr. text    indic.   child_border
-  client.focused          #556064 #556064 #80FFF9 #FDF6E3
-  client.focused_inactive #2F3D44 #2F3D44 #1ABC9C #454948
-  client.unfocused        #2F3D44 #2F3D44 #1ABC9C #454948
-  client.urgent           #CB4B16 #FDF6E3 #1ABC9C #268BD2
-  client.placeholder      #000000 #0c0c0c #ffffff #000000 
+  client.focused          #665c54 #665c54 #eddbb2 #2e9ef4   #a89984
+	client.focused_inactive #282828 #5f676a #ffffff #484e50   #5f676a
+	client.unfocused        #3c3836 #3c3836 #a89984 #292d2e   #222222
+	client.urgent           #fb4934 #fb4934 #ebdbb2 #fb4934   #fb4934
+	client.placeholder      #000000 #0c0c0c #ffffff #000000   #0c0c0c
 
-  client.background       #2B2C2B
+	client.background       #ffffff
 
 #############################
 ### settings for i3-gaps: ###
@@ -424,7 +423,7 @@ gaps inner 10
 gaps outer -2
 smart_borders on
 smart_gaps on
-new_window pixel 2
+new_window pixel 4
 
 # Additionally, you can issue commands with the following syntax. This is useful to bind keys to changing the gap size.
 # gaps inner|outer current|all set|plus|minus <px>
