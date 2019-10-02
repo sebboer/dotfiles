@@ -315,6 +315,7 @@ bindsym $mod+bracketright exec "amixer -q sset Master 5%+ unmute"
 bindsym $mod+bracketleft exec "amixer -q sset Master 5%- unmute"
 bindsym Shift+XF86AudioRaiseVolume exec "amixer -q sset Master 1%+ unmute"
 bindsym Shift+XF86AudioLowerVolume exec "amixer -q sset Master 1%- unmute"
+bindsym $mod+Shift+p exec playerctl play-pause
 bindsym Print exec xdotool click 8
 bindsym Shift+Print exec xdotool click 9
 bindsym $mod+Print --release exec --no-startup-id i3-scrot -s
