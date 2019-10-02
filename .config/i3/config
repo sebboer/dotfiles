@@ -311,6 +311,8 @@ bindsym XF86AudioNext exec playerctl next
 bindsym XF86AudioPrev exec playerctl previous
 bindsym XF86AudioRaiseVolume exec "amixer -q sset Master 5%+ unmute"
 bindsym XF86AudioLowerVolume exec "amixer -q sset Master 5%- unmute"
+bindsym $mod+bracketright exec "amixer -q sset Master 5%+ unmute"
+bindsym $mod+bracketleft exec "amixer -q sset Master 5%- unmute"
 bindsym Shift+XF86AudioRaiseVolume exec "amixer -q sset Master 1%+ unmute"
 bindsym Shift+XF86AudioLowerVolume exec "amixer -q sset Master 1%- unmute"
 bindsym Print exec xdotool click 8
