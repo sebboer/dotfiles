@@ -239,6 +239,7 @@ for_window [class="JetBrains Toolbox"] floating enable
 for_window [class="jetbrains-toolbox"] floating enable
 for_window [class="Blueman-manager"] floating enable
 for_window [class="mpv"] floating enable
+for_window [class="xev"] floating enable
 
 # switch to workspace with urgent window automatically
 for_window [urgent=latest] focus
