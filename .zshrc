@@ -76,6 +76,9 @@ bindkey '^e' edit-command-line
 # NVM
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 
+#TODOIST
+source "$GOPATH/src/github.com/sachaos/todoist/todoist_functions.sh"
+
 # Serverless
 source $HOME/.config/zsh/serverless.zsh
 compinit -d $HOME/.cache/zsh/zcompdump-$ZSH_VERSION
