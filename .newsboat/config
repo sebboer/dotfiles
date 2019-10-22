@@ -28,7 +28,7 @@ color listfocus_unread yellow default bold
 color info red black bold
 color article cyan default
 
-browser firefox-developer-edition
+browser firefox
 macro , open-in-browser
-macro w set browser "w3m"; open-in-browser ; set browser firefox-developer-edition
+macro w set browser "w3m"; open-in-browser ; set browser firefox
 macro v set browser "setsid nohup mpv"; open-in-browser ; set browser linkhandler
