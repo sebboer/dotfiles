@@ -3,11 +3,10 @@
 
 ## Configs
 + i3 (i3-gaps)
++ i3-status
 + zsh
 + ranger
 + alacritty
-+ Xresources
-+ polybar (with scripts)
 + rofi
 + zathura
 + nvim
