@@ -350,12 +350,12 @@ exec --no-startup-id start_conky_maia
 exec_always --no-startup-id ff-theme-util
 exec_always --no-startup-id fix_xcursor
 
-exec thunderbird
-exec bitwarden
-exec telegram-desktop
-exec discord
-exec signal-desktop
-exec alacritty
+exec --no-startup-id thunderbird
+exec --no-startup-id bitwarden
+exec --no-startup-id telegram-desktop
+exec --no-startup-id signal-desktop
+exec --no-startup-id alacritty
+exec --no-startup-id /home/basti/go/bin/todoist s
 
 
 # Color palette used for the terminal ( ~/.Xresources file )
