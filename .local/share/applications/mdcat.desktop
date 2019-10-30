@@ -1,0 +1,14 @@
+[Desktop Entry]
+Name=mdcat
+GenericName=Markdown Viewer
+Comment=cat for markdown
+TryExec=mdcat
+Exec=alacritty -e "zsh" "-c" "mdcat %f | less -r"
+Terminal=false
+Type=Application
+Keywords=Text;editor;
+Icon=mdcat.png
+Categories=Utility;Markdown Viewer;
+StartupNotify=false
+Hidden=true
+MimeType=text/markdown
