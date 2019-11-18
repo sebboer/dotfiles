@@ -136,7 +136,7 @@ bindsym $mod+minus move scratchpad
 # Show the next scratchpad window or hide the focused scratchpad window.
 # If there are multiple scratchpad windows, this command cycles through them.
 bindsym $mod+plus scratchpad show
-bindsym $mod+p scratchpad show
+bindsym $mod+Mod1+p scratchpad show
 
 #navigate workspaces next / previous
 bindsym $mod+Ctrl+Right workspace next
@@ -311,6 +311,7 @@ bindsym $mod+Shift+x exec ~/.config/scripts/i3exit lock
 # # ==============================================================================================
 #
 bindsym XF86AudioPlay exec playerctl play-pause
+bindsym $mod+p exec playerctl play-pause
 bindsym XF86AudioPause exec playerctl pause
 bindsym XF86AudioNext exec playerctl next
 bindsym XF86AudioPrev exec playerctl previous
