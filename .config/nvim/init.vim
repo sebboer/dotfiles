@@ -17,6 +17,7 @@ Plug 'vim-pandoc/vim-pandoc-syntax'
 Plug 'lervag/vimtex'
 Plug 'mcchrish/nnn.vim'
 Plug 'scrooloose/nerdcommenter'
+Plug 'elixir-editors/vim-elixir'
 
 call plug#end()
 
