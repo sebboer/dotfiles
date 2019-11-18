@@ -36,14 +36,6 @@ alias dkstart='systemctl start docker'
 alias dkcstop='docker stop $(docker ps -a -q)'
 alias dkrmall='docker rm $(docker ps -aq)'
 
-# Calendar
-alias cal='gcalcli'
-alias calw='gcalcli calw'
-alias cala='gcalcli agenda'
-alias calg='gcalcli --calendar="Gemeinsamer Kalender"'
-alias calp='gcalcli --calendar=sebastian.boerakker@gmail.com'
-alias calm='gcalcli --calendar=Michelle'
-
 #
 alias vim='nvim'
 alias xclipsel='xclip -selection "clipboard"'
@@ -64,7 +56,5 @@ alias ggrive='wd grive && grive -P && cd -'
 alias nnn='nnn -dor'
 alias deu='dict -d fd-deu-eng'
 alias eng='dict -d fd-eng-deu'
-alias todo='/home/basti/go/bin/todoist'
-alias todols='/home/basti/go/bin/todoist list -f "(overdue | today)"'
 alias rg='rg -S'
 alias taskls='task ls due:today'
