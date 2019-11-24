@@ -9,3 +9,4 @@ map L zoom out
 set selection-clipboard clipboard
 set recolor-lightcolor \#2B2B2B
 
+set scroll-step 80
