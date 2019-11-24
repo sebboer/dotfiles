@@ -314,6 +314,8 @@ bindsym XF86AudioPlay exec playerctl play-pause
 bindsym $mod+p exec playerctl play-pause
 bindsym XF86AudioPause exec playerctl pause
 bindsym XF86AudioNext exec playerctl next
+bindsym $mod+Ctrl+bracketright exec playerctl next
+bindsym $mod+Ctrl+bracketleft exec playerctl previous
 bindsym XF86AudioPrev exec playerctl previous
 bindsym XF86AudioRaiseVolume exec "amixer -q sset Master 5%+ unmute"
 bindsym XF86AudioLowerVolume exec "amixer -q sset Master 5%- unmute"
