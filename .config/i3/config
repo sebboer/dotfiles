@@ -333,7 +333,7 @@ bindsym XF86MonBrightnessUp exec playerctl next
 bindsym XF86MonBrightnessDown exec playerctl previous
 #bindsym XF86Tools exec env XDG_CURRENT_DESKTOP="kde" systemsettings5
 bindsym XF86Tools exec --no-startup-id ~/.config/scripts/redshift-toggle.sh
-bindsym XF86Explorer exec alacritty -e nnn
+bindsym XF86Explorer exec alacritty -e nnn -dor
 bindsym XF86LaunchA exec env XDG_CURRENT_DESKTOP="kde" dolphin
 bindsym XF86WLAN exec blueman-manager
 
