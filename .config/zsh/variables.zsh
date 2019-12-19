@@ -14,3 +14,4 @@ export NNN_CONTEXT_COLORS='3254'
 export NNN_BMS='j:~/Downloads/JD;g:~/googledrive;m:~/mnt;s:~/googledrive/Studium;d:~/Downloads;p:~/Pictures;w:~/workspace;v:~/Videos;t:~/.local/share/Trash;c:~/.config'
 export NNN_PLUG='s:sxiv;p:pdfview'
 export NNN_TRASH=1
+export PAGER=bat
