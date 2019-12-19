@@ -12,5 +12,5 @@ if [[ ! -d "$where" ]]; then
 	[[ "$mkdiryn" = Yes ]] && mkdir "$where"
 fi
 
-sudo mount $mountpoint $where && notify-send -a Mounter "$mountpoint mounted to $where."
+sudo mount $mountpoint $where && notify-send -a Mounter "$mountpoint mounted to $where." -i hdd
 
