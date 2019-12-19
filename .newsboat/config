@@ -1,5 +1,6 @@
 auto-reload yes
 notify-always yes
+notify-program notify-send
 
 bind-key j down
 bind-key k up
