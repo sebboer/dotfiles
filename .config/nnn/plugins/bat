@@ -1,0 +1,11 @@
+#!/usr/bin/env sh
+
+# Description: View a file in bat
+# Requires: xxd and $PAGER
+#
+# Author: sebboer
+
+if ! [ -z "$1" ]; then
+    bat --paging=always --pager=less "$1";
+		clear
+fi
