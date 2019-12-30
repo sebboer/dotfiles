@@ -82,3 +82,9 @@ source "$GOPATH/src/github.com/sachaos/todoist/todoist_functions.sh"
 # Serverless
 source $HOME/.config/zsh/serverless.zsh
 compinit -d $HOME/.cache/zsh/zcompdump-$ZSH_VERSION
+
+
+source ~/.zplug/init.zsh
+zplug 'wfxr/forgit'
+
+zplug load
