@@ -315,10 +315,11 @@ bindsym $mod+Ctrl+bracketleft exec playerctl previous
 bindsym XF86AudioPrev exec playerctl previous
 bindsym XF86AudioRaiseVolume exec "amixer -q sset Master 5%+ unmute"
 bindsym XF86AudioLowerVolume exec "amixer -q sset Master 5%- unmute"
-bindsym $mod+bracketright exec "amixer -q sset Master 5%+ unmute"
-bindsym $mod+bracketleft exec "amixer -q sset Master 5%- unmute"
+bindsym $mod+bracketright exec "amixer -q sset Master 5%+ unmute && notify-send -a amixer -i audio-volume-medium Volume $(amixer sget Master | rg 'Mono: Playback' | awk '{print $3}')% -t 500"
+bindsym $mod+bracketleft exec "amixer -q sset Master 5%- unmute && notify-send -a amixer -i audio-volume-low Volume $(amixer sget Master | rg 'Mono: Playback' | awk '{print $3}')% -t 500"
 bindsym Shift+XF86AudioRaiseVolume exec "amixer -q sset Master 1%+ unmute"
 bindsym Shift+XF86AudioLowerVolume exec "amixer -q sset Master 1%- unmute"
+bindsym $mod+Mod1+m exec "amixer -D pulse set Master 1+ toggle"
 bindsym $mod+Shift+p exec playerctl play-pause
 bindsym Print exec xdotool click 8
 bindsym Shift+Print exec xdotool click 9
