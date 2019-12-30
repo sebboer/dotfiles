@@ -74,3 +74,7 @@ wget-recursive() {
 	wget --recursive --no-parent -e robots=off $1
 }
 
+
+getdoc() {
+	mdcat "/home/basti/.config/zsh/doc/${1}.md"
+}
