@@ -5,8 +5,8 @@
 + i3 (i3-gaps)
 + i3-status
 + zsh
-+ ranger
 + alacritty
++ nnn
 + rofi
 + zathura
 + nvim
