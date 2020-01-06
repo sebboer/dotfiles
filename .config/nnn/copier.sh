@@ -1,2 +1,2 @@
 #!/bin/sh
-cat ~/.nnncp | xsel --clipboard --input
+xsel --clipboard --input < ~/.nnncp

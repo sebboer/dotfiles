@@ -10,5 +10,3 @@
 + rofi
 + zathura
 + nvim
-
-
