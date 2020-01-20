@@ -12,5 +12,5 @@ if [[ ! -d "$where" ]]; then
 	[[ "$mkdiryn" = Yes ]] && mkdir "$where"
 fi
 
-sudo mount -o users,uid=1000,gid=1000 $mountpoint $where && notify-send -a Mounter "$mountpoint mounted to $where." -i hdd
+sudo mount -o users $mountpoint $where && notify-send -a Mounter "$mountpoint mounted to $where." -i hdd
 
