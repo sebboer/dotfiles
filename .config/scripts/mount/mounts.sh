@@ -1,13 +1,13 @@
 #!/bin/zsh
 
-mntType=$(echo "nfs\nblk" | rofi -dmenu -i -l 10 -p "What type do you want to mount?")
+mntType=$(echo "blk\nsmb" | rofi -dmenu -i -l 10 -p "What type do you want to mount?")
 
 case "$mntType" in
-	nfs)
-		~/.config/scripts/mount/nas-mount.sh
-		;;
 	blk)
 		~/.config/scripts/mount/blk-mount.sh
+		;;
+	smb)
+		~/.config/scripts/mount/smb-mount.sh
 		;;
 	*)
 		echo "$mntType not found"
