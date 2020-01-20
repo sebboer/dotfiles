@@ -7,7 +7,7 @@ case "$mntType" in
 		~/.config/scripts/mount/nas-mount.sh
 		;;
 	blk)
-		~/.config/scripts/mount/lsblk-mount.sh
+		~/.config/scripts/mount/blk-mount.sh
 		;;
 	*)
 		echo "$mntType not found"
