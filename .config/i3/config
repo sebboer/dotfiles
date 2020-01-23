@@ -36,7 +36,7 @@ bindsym $mod+Shift+q kill
 
 # start program launcher
 bindsym $mod+d exec rofi -show drun
-bindsym $mod+Shift+d exec rofi -show run
+bindsym $mod+Shift+d exec rofi -disable-history -show run
 bindsym $mod+Tab exec rofi -show window
 
 # launch categorized menu
