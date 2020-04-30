@@ -10,16 +10,14 @@ window:
 scrolling:
   history: 10000
   multiplier: 3
-  auto_scroll: false
-tabspaces: 8
 font:
   normal:
-    family: SauceCodePro Nerd Font Mono
-    style: Retina
+    family: JetBrains Mono
+    style: Regular
   bold:
-    family: SauceCodePro Nerd Font Mono
+    family: JetBrains Mono
   italic:
-    family: SauceCodePro Nerd Font Mono
+    family: JetBrains Mono
   size: 12
   offset:
     x: 0
