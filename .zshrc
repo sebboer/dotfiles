@@ -20,10 +20,12 @@ plugins=(
   copydir
   copyfile
   calc
+	kubectl
   docker
   docker-machine
   docker-compose
   fzf
+	fzf-tab
   git
   gitignore
   colored-man-pages
@@ -60,6 +62,7 @@ source $HOME/.config/zsh/common-functions.zsh
 # FZF
 # ======================================================================
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+enable-fzf-tab
 
 # ======================================================================
 # VI MODE
@@ -73,18 +76,26 @@ zle -N zle-keymap-select
 autoload edit-command-line; zle -N edit-command-line
 bindkey '^e' edit-command-line
 
-# NVM
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+# ZSH completion backward TAB as Shift-TAB
+bindkey '^[[Z' reverse-menu-complete
 
-#TODOIST
-source "$GOPATH/src/github.com/sachaos/todoist/todoist_functions.sh"
+# NVM
+#[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 
 # Serverless
-source $HOME/.config/zsh/serverless.zsh
+#source $HOME/.config/zsh/serverless.zsh
+
+
+#source ~/.zplug/init.zsh
+#zplug 'wfxr/forgit'
+
+#zplug load
+
+# microk8s autocompletion
+#ERROR=$(microk8s.status)
+
+#if [ $? -eq 0 ]
+#then
+	#if [ $commands[microk8s.kubectl] ]; then source <(microk8s.kubectl completion zsh | sed "s/complete -o default -F __start_kubectl kubectl/complete -o default -F __start_kubectl microk8s.kubectl/g" | sed "s/complete -o default -o nospace -F __start_kubectl kubectl/complete -o default -o nospace -F __start_kubectl microk8s.kubectl/g"); fi
+#fi
 compinit -d $HOME/.cache/zsh/zcompdump-$ZSH_VERSION
-
-
-source ~/.zplug/init.zsh
-zplug 'wfxr/forgit'
-
-zplug load
