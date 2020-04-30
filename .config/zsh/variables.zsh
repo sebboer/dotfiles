@@ -11,8 +11,8 @@ export FZF_DEFAULT_COMMAND='ag --hidden --ignore .git -l -g ""'
 # NNN
 export NNN_COPIER=$HOME/.config/nnn/copier.sh
 export NNN_CONTEXT_COLORS='3254'
-export NNN_BMS='j:~/Downloads/JD;g:~/googledrive;m:~/mnt;s:~/googledrive/Studium;d:~/Downloads;p:~/Pictures;w:~/workspace;v:~/Videos;t:~/.local/share/Trash;c:~/.config'
-export NNN_PLUG='s:sxiv;p:pdfview;b:bat;m:mpv;'
+export NNN_BMS='j:~/Downloads/JD;m:~/mnt;d:~/Downloads;p:~/Pictures;w:~/workspace;v:~/Videos;t:~/.local/share/Trash;c:~/.config;n:~/Nextcloud;s:~/Nextcloud/Documents/Studium'
+export NNN_PLUG='s:sxiv;p:pandoc;b:bat;m:mediainf;l:less;h:hexylview;'
 export NNN_TRASH=1
 export PAGER=less
 export GIT_PAGER=bat
