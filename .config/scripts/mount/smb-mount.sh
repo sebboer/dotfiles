@@ -2,7 +2,7 @@
 
 ip=$(cat /home/basti/.config/scripts/mount/ipv4 | rofi -dmenu -i -l 10 -p "Mount IP")
 [[ -z "$ip" ]] && { echo "ip is empty" ; exit 1; }
-dest=$(echo "video\nphoto\nbasti-photo\nmusic\nhomes" | rofi -dmenu -i -l 10 -p "Which destination directory to mount?")
+dest=$(echo "Movies\nTVShows\nVideos\nPhoto\nPhotoBasti\nMusic\nHomes" | rofi -dmenu -i -l 10 -p "Which destination directory to mount?")
 [[ -z "$dest" ]] && { echo "destination is empty" ; exit 1; }
 mount=$(ls /home/basti/mnt/server | rofi -dmenu -i -l 10 -p "Mountpoint?")
 [[ -z "$mount" ]] && { echo "mountpoint is empty" ; exit 1; }
