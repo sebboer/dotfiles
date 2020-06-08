@@ -1,8 +1,0 @@
-#!/usr/bin/env sh
-
-# Description: Updates GoogleDrive 
-#
-# Author: sebboer
-
-cd $HOME/googledrive/
-grive
