@@ -1,28 +1,22 @@
 #!/bin/bash
 
 
-usage() { echo "Usage: $0 [-s <bool>] [-a <bool>]" 1>&2; exit 1; }
+usage() { echo "Usage: $0 [-size <1720x1440>] [-offset <1720>]" 1>&2; exit 1; }
 
-a=false
-file=~/Videos/out.mkv
-size=$(xrandr | ag primary | awk '{print $4;}' | cut -d'+' -f 1)
-output=':0.0'
-y=0
-x=0
+size="1720x1440"
+screen_offset=0
 
-while getopts "a:x:y:s:" o; do
+
+while getopts "s:o:p:" o; do
     case "${o}" in
-        a)
-		a=true
-	    	;;
+	o)
+		screen_offset=${OPTARG}
+		;;
 	s)
-		s=${OPTARG}
+		size=${OPTARG}
 		;;
-	x)
-		x=${OPTARG}
-		;;
-	y)
-		y=${OPTARG}
+	p)
+		picture=true
 		;;
         *)
 		usage
@@ -31,34 +25,8 @@ while getopts "a:x:y:s:" o; do
 done
 shift $((OPTIND-1))
 
-if [ ! -z $1 ]; then
-	file=$1
+if [ ! -z p ]; then
+	~/.config/scripts/picture_in_picture.sh &
 fi
 
-if [ ! -z $s ]; then
-	size=$s
-fi
-
-output=$output+$x
-
-output=$output,$y
-	
-
-echo -e '\033[1;33mRecording Screen with Size: '$size' on x='$x' y='$y' Audio='$a' Output='$file'\033[0m'
-
-if $a; then
-	ffmpeg \
-	-f x11grab \
-	-s $size \
-	-i $output \
-	-f pulse \
-	-i default \
-	$file
-else
-	ffmpeg \
-	-f x11grab \
-	-s $size \
-	-i $output \
-	$file
-fi
-
+ffmpeg -video_size $size -framerate 25 -f x11grab -i :0.0+${screen_offset} -f pulse -ac 2 -i 0 ~/Videos/out.mkv -async 1 -vsync 1
