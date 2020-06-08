@@ -31,6 +31,7 @@ floating_modifier $mod
 bindsym $mod+Return exec alacritty
 bindsym $mod+Shift+Return exec alacritty --title "Floating"
 for_window [class="Alacritty" title="Floating"] floating enable
+for_window [class="VirtualBox Machine"] floating disable 
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -47,7 +48,7 @@ bindsym $mod+z exec --no-startup-id morc_menu
 ## sound-section - DO NOT EDIT if you wish to automatically upgrade Alsa -> Pulseaudio later! ##
 ################################################################################################
 
-exec --no-startup-id volumeicon
+#exec --no-startup-id volumeicon
 bindsym $mod+Mod1+m exec alacritty -e 'ncpamixer'
 #exec --no-startup-id pulseaudio
 #exec --no-startup-id pa-applet
@@ -317,8 +318,10 @@ bindsym $mod+Ctrl+bracketleft exec playerctl previous
 bindsym XF86AudioPrev exec playerctl previous
 bindsym XF86AudioRaiseVolume exec "amixer -q sset Master 5%+ unmute"
 bindsym XF86AudioLowerVolume exec "amixer -q sset Master 5%- unmute"
-bindsym $mod+bracketright exec "amixer -q sset Master 5%+ unmute && notify-send -a amixer -i audio-volume-medium Volume $(amixer sget Master | rg 'Mono: Playback' | awk '{print $3}')% -t 500"
-bindsym $mod+bracketleft exec "amixer -q sset Master 5%- unmute && notify-send -a amixer -i audio-volume-low Volume $(amixer sget Master | rg 'Mono: Playback' | awk '{print $3}')% -t 500"
+#bindsym $mod+bracketright exec "amixer -q sset Master 5%+ unmute && notify-send -a amixer -i audio-volume-medium Volume $(amixer sget Master | rg 'Mono: Playback' | awk '{print $3}')% -t 500"
+bindsym $mod+bracketright exec "amixer -c 2 -q sset 'PCM',1 5%+ unmute && notify-send -a amixer -i audio-volume-medium Volume $(amixer -c 2 sget 'PCM',1 | rg 'Mono: Playback' | awk '{print $4}') -t 500"
+#bindsym $mod+bracketleft exec "amixer -q sset Master 5%- unmute && notify-send -a amixer -i audio-volume-low Volume $(amixer sget Master | rg 'Mono: Playback' | awk '{print $3}')% -t 500"
+bindsym $mod+bracketleft exec "amixer -c 2 -q sset 'PCM',1 5%- unmute && notify-send -a amixer -i audio-volume-low Volume $(amixer -c 2 sget 'PCM',1 | rg 'Mono: Playback' | awk '{print $4}') -t 500"
 bindsym Shift+XF86AudioRaiseVolume exec "amixer -q sset Master 1%+ unmute"
 bindsym Shift+XF86AudioLowerVolume exec "amixer -q sset Master 1%- unmute"
 bindsym $mod+Ctrl+m exec "amixer -D pulse set Master 1+ toggle"
