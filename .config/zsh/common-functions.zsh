@@ -66,3 +66,5 @@ wget-recursive() {
 getdoc() {
 	mdcat "/home/basti/.config/zsh/doc/${1}.md"
 }
+
+fpath+=~/.config/zsh/functions/_rustup
