@@ -8,8 +8,8 @@ set $mod Mod4
 # workspace_layout tabbed <stacking|tabbed>
 
 # Configure border style <normal|1pixel|pixel xx|none|pixel>
-default_border pixel 6
-default_floating_border normal
+default_border pixel 1
+default_floating_border pixel 1
 
 # Hide borders
 hide_edge_borders none
@@ -28,18 +28,20 @@ font xft:JetBrainsMono 12
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec alacritty
-bindsym $mod+Shift+Return exec alacritty --title "Floating"
-for_window [class="Alacritty" title="Floating"] floating enable
+bindsym $mod+Return exec --no-startup-id alacritty
+bindsym $mod+Shift+Return exec --no-startup-id alacritty --title "Floating"
+for_window [class="Alacritty" title="Floating"] floating enable; border none
 for_window [class="VirtualBox Machine"] floating disable 
+for_window [title="Desktop — Plasma"] kill; floating enable; border none
+exec --no-startup-id feh --bg-scale /usr/share/backgrounds/wallpapers-juhraya/Albero_Del_Pepe_by_Harisont.jpg
 
 # kill focused window
 bindsym $mod+Shift+q kill
 
 # start program launcher
-bindsym $mod+d exec rofi -show drun
-bindsym $mod+Shift+d exec rofi -disable-history -show run
-bindsym $mod+Tab exec rofi -show window
+bindsym $mod+d exec --no-startup-id rofi -show drun
+#bindsym $mod+Shift+d exec rofi
+bindsym $mod+Tab exec --no-startup-id rofi -show window
 
 # launch categorized menu
 bindsym $mod+z exec --no-startup-id morc_menu
@@ -57,14 +59,14 @@ bindsym $mod+Mod1+m exec alacritty -e 'ncpamixer'
 ################################################################################################
 
 # Start Applications
-bindsym $mod+Ctrl+b exec alacritty -e 'bmenu'
-bindsym $mod+F2 exec palemoon
-bindsym $mod+F3 exec pcmanfm
+bindsym $mod+Ctrl+b exec --no-startup-id alacritty -e 'bmenu'
+bindsym $mod+F2 exec --no-startup-id palemoon
+bindsym $mod+F3 exec --no-startup-id pcmanfm
 # bindsym $mod+F3 exec ranger
 bindsym $mod+Shift+F3 exec pcmanfm_pkexec
 bindsym $mod+F5 exec alacritty -e 'mocp'
 #bindsym $mod+t exec --no-startup-id pkill compton
-bindsym $mod+Ctrl+t exec --no-startup-id compton -b
+#bindsym $mod+Ctrl+t exec --no-startup-id compton -b
 #bindsym $mod+Shift+d --release exec "killall dunst; exec notify-send 'restart dunst'"
 #bindsym Print exec --no-startup-id i3-scrot
 #bindsym $mod+Print --release exec --no-startup-id i3-scrot -w
@@ -104,8 +106,8 @@ bindsym $mod+Shift+b move container to workspace back_and_forth; workspace back_
 bindsym $mod+b workspace back_and_forth
 
 # split orientation
-bindsym $mod+c split h;exec notify-send -i baseline-border-right -a i3 -t 2000 'tile horizontally'
-bindsym $mod+v split v;exec notify-send -i baseline-border-bottom -a i3 -t 2000 'tile vertically'
+bindsym $mod+c split h;exec --no-startup-id notify-send -i baseline-border-right -a i3 -t 2000 'tile horizontally'
+bindsym $mod+v split v;exec --no-startup-id notify-send -i baseline-border-bottom -a i3 -t 2000 'tile vertically'
 bindsym $mod+q split toggle
 
 # toggle fullscreen mode for the focused container
@@ -241,6 +243,8 @@ for_window [class="jetbrains-toolbox"] floating enable
 for_window [class="Blueman-manager"] floating enable
 for_window [class="mpv"] floating enable
 for_window [class="xev"] floating enable
+for_window [window_type="notification"] floating enable
+for_window [title="Microsoft Teams Notification"] floating enable
 
 # switch to workspace with urgent window automatically
 for_window [urgent=latest] focus
@@ -253,7 +257,12 @@ bindsym $mod+Shift+r restart
 
 # exit i3 (logs you out of your X session)
 #bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
-bindsym $mod+Shift+e exec ~/.config/scripts/exit-dmenu.sh
+#bindsym $mod+Shift+e exec ~/.config/scripts/exit-dmenu.sh
+# using plasma's logout screen instead of i3's
+bindsym $mod+Shift+e exec --no-startup-id qdbus org.kde.ksmserver /KSMServer org.kde.KSMServerInterface.logout -1 -1 -1
+#bindsym $mod+Shift+x exec --no-startup-id qdbus org.freedesktop.ScreenSaver /ScreenSaver Lock
+#bindsym $mod+Shift+x exec --no-startup-id qdbus org.kde.screensaver /ScreenSaver Lock
+
 
 bindsym $mod+Shift+m exec ~/.config/scripts/mount/mounts.sh
 bindsym $mod+Shift+u exec ~/.config/scripts/mount/umount.sh
@@ -302,53 +311,54 @@ mode "resize" {
 
 # Lock screen
 #bindsym $mod+Shift+x exec --no-startup-id blurlock
-bindsym $mod+Shift+x exec ~/.config/scripts/i3exit lock
-#bindsym $mod+Shift+x exec ~/.config/scripts/i3exit lock
+#bindsym $mod+Shift+x exec --no-startup-id ~/.config/scripts/i3exit lock
 
 # ==============================================================================================
 # # Media player controls for Mediakeys
 # # ==============================================================================================
 #
 bindsym XF86AudioPlay exec playerctl play-pause
-bindsym $mod+p exec playerctl play-pause
+bindsym $mod+p exec --no-startup-id playerctl play-pause
 bindsym XF86AudioPause exec playerctl pause
 bindsym XF86AudioNext exec playerctl next
-bindsym $mod+Ctrl+bracketright exec playerctl next
-bindsym $mod+Ctrl+bracketleft exec playerctl previous
+bindsym $mod+Ctrl+bracketright exec --no-startup-id playerctl next
+bindsym $mod+Ctrl+bracketleft exec --no-startup-id playerctl previous
 bindsym XF86AudioPrev exec playerctl previous
 bindsym XF86AudioRaiseVolume exec "amixer -q sset Master 5%+ unmute"
 bindsym XF86AudioLowerVolume exec "amixer -q sset Master 5%- unmute"
 #bindsym $mod+bracketright exec "amixer -q sset Master 5%+ unmute && notify-send -a amixer -i audio-volume-medium Volume $(amixer sget Master | rg 'Mono: Playback' | awk '{print $3}')% -t 500"
-bindsym $mod+bracketright exec "amixer -c 2 -q sset 'PCM',1 5%+ unmute && notify-send -a amixer -i audio-volume-medium Volume $(amixer -c 2 sget 'PCM',1 | rg 'Mono: Playback' | awk '{print $4}') -t 500"
+bindsym $mod+bracketright exec --no-startup-id "amixer -c 2 -q sset 'PCM',1 5%+ unmute && notify-send -a amixer -i audio-volume-medium Volume $(amixer -c 2 sget 'PCM',1 | rg 'Mono: Playback' | awk '{print $4}') -t 500"
 #bindsym $mod+bracketleft exec "amixer -q sset Master 5%- unmute && notify-send -a amixer -i audio-volume-low Volume $(amixer sget Master | rg 'Mono: Playback' | awk '{print $3}')% -t 500"
-bindsym $mod+bracketleft exec "amixer -c 2 -q sset 'PCM',1 5%- unmute && notify-send -a amixer -i audio-volume-low Volume $(amixer -c 2 sget 'PCM',1 | rg 'Mono: Playback' | awk '{print $4}') -t 500"
+bindsym $mod+bracketleft exec --no-startup-id "amixer -c 2 -q sset 'PCM',1 5%- unmute && notify-send -a amixer -i audio-volume-low Volume $(amixer -c 2 sget 'PCM',1 | rg 'Mono: Playback' | awk '{print $4}') -t 500"
 bindsym Shift+XF86AudioRaiseVolume exec "amixer -q sset Master 1%+ unmute"
 bindsym Shift+XF86AudioLowerVolume exec "amixer -q sset Master 1%- unmute"
-bindsym $mod+Ctrl+m exec "amixer -D pulse set Master 1+ toggle"
-bindsym $mod+Shift+p exec playerctl play-pause
-bindsym Print exec xdotool click 8
-bindsym Shift+Print exec xdotool click 9
+bindsym $mod+Ctrl+m exec --no-startup-id "amixer -D pulse set Master 1+ toggle"
+bindsym $mod+Shift+p exec --no-startup-id playerctl play-pause
+bindsym Print exec --no-startup-id xdotool click 8
+bindsym Shift+Print --no-startup-id exec xdotool click 9
 bindsym $mod+Print --release exec --no-startup-id i3-scrot -s
-bindsym XF86AudioMute exec "amixer -q sset Master,0 toggle"
-bindsym XF86Display exec playerctl play-pause
-bindsym XF86MonBrightnessUp exec playerctl next
-bindsym XF86MonBrightnessDown exec playerctl previous
+bindsym XF86AudioMute exec --no-startup-id "amixer -q sset Master,0 toggle"
+bindsym XF86Display exec --no-startup-id playerctl play-pause
+bindsym XF86MonBrightnessUp exec --no-startup-id playerctl next
+bindsym XF86MonBrightnessDown exec --no-startup-id playerctl previous
 #bindsym XF86Tools exec env XDG_CURRENT_DESKTOP="kde" systemsettings5
 bindsym XF86Tools exec --no-startup-id ~/.config/scripts/redshift-toggle.sh
-bindsym XF86Explorer exec alacritty -e nnn -dor
-bindsym XF86LaunchA exec env XDG_CURRENT_DESKTOP="kde" dolphin
-bindsym XF86WLAN exec blueman-manager
+bindsym XF86Explorer exec --no-startup-id alacritty -e nnn -dor
+bindsym XF86LaunchA exec --no-startup-id env XDG_CURRENT_DESKTOP="kde" dolphin
+bindsym XF86WLAN exec --no-startup-id blueman-manager
 
 
 # Autostart applications
-exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
-exec --no-startup-id nitrogen --restore; sleep 1; compton -b
+exec --no-startup-id /usr/lib/polkit-kde-authentication-agent-1
+#exec --no-startup-id nitrogen --restore; sleep 1; compton -b
+exec --no-startup-id nitrogen --restore
+exec --no-startup-id protonmail-bridge --no-window
 #exec --no-startup-id manjaro-hello
-exec --no-startup-id nm-applet
-exec --no-startup-id xfce4-power-manager
+#exec --no-startup-id nm-applet
+#exec --no-startup-id xfce4-power-manager
 exec --no-startup-id pamac-tray
 #exec --no-startup-id clipit
-exec --no-startup-id blueman-applet
+#exec --no-startup-id blueman-applet
 # exec_always --no-startup-id sbxkb
 exec --no-startup-id start_conky_maia
 # exec --no-startup-id start_conky_green
@@ -396,36 +406,36 @@ set_from_resource $term_color14    color14
 set_from_resource $term_color15    color15
 
 # Start i3bar to display a workspace bar (plus the system information i3status if available)
-bar {
-	i3bar_command i3bar
-	status_command i3status | /home/basti/.config/scripts/i3spotifystatus/pystatus.py
-	position bottom
+#bar {
+	#i3bar_command i3bar
+	#status_command i3status | /home/basti/.config/scripts/i3spotifystatus/pystatus.py
+	#position bottom
 
-## please set your primary output first. Example: 'xrandr --output eDP1 --primary'
-#	tray_output primary
-#	tray_output eDP1
+### please set your primary output first. Example: 'xrandr --output eDP1 --primary'
+##	tray_output primary
+##	tray_output eDP1
 
-	bindsym button4 nop
-	bindsym button5 nop
-#  font xft:URWGothic-Book 11
-  font xft:URWGothic-Book 12
-	strip_workspace_numbers yes
+	#bindsym button4 nop
+	#bindsym button5 nop
+##  font xft:URWGothic-Book 11
+  #font xft:URWGothic-Book 12
+	#strip_workspace_numbers yes
 
-    colors {
-        background #3c3836
-				statusline #ebdbb2
-				separator  #666666
+    #colors {
+        #background #3c3836
+				#statusline #ebdbb2
+				#separator  #666666
 
 		
-				focused_workspace  #458588 #458588 #ebdbb2
-				active_workspace   #83a598 #83a598 #ebdbb2
-				inactive_workspace #504945 #504945 #ebdbb2
-				urgent_workspace   #cc241d #cc241d #504945
-    }
-}
+				#focused_workspace  #458588 #458588 #ebdbb2
+				#active_workspace   #83a598 #83a598 #ebdbb2
+				#inactive_workspace #504945 #504945 #ebdbb2
+				#urgent_workspace   #cc241d #cc241d #504945
+    #}
+#}
 
-# hide/unhide i3status bar
-bindsym $mod+m bar mode toggle
+## hide/unhide i3status bar
+#bindsym $mod+m bar mode toggle
 
 # Theme colors
 # class                   border  backgr. text    indic.   child_border
@@ -446,7 +456,7 @@ gaps inner 10
 gaps outer -2
 smart_borders on
 smart_gaps on
-new_window pixel 4
+new_window pixel 2
 
 # Additionally, you can issue commands with the following syntax. This is useful to bind keys to changing the gap size.
 # gaps inner|outer current|all set|plus|minus <px>
@@ -497,3 +507,24 @@ mode "$mode_gaps_outer" {
         bindsym Escape mode "default"
 }
 
+# Plasma compatibility improvements
+for_window [window_role="pop-up"] floating enable
+for_window [window_role="task_dialog"] floating enable
+
+for_window [class="yakuake"] floating enable
+for_window [class="systemsettings"] floating enable
+for_window [class="plasmashell"] floating enable;
+for_window [class="Plasma"] floating enable; border none
+for_window [title="plasma-desktop"] floating enable; border none
+for_window [title="win7"] floating enable; border none
+for_window [class="krunner"] floating enable; border none
+for_window [class="Kmix"] floating enable; border none
+for_window [class="Klipper"] floating enable; border none
+for_window [class="Plasmoidviewer"] floating enable; border none
+for_window [class="(?i)*nextcloud*"] floating disable
+for_window [class="plasmashell" window_type="notification"] border none, move right 700px, move down 450px
+no_focus [class="plasmashell" window_type="notification"]
+
+bindsym $mod+Shift+d exec --no-startup-id qdbus org.kde.kglobalaccel /component/krunner_desktop org.kde.kglobalaccel.Component.invokeShortcut _launch
+bindsym --release $mod+Shift+x exec --no-startup-id qdbus org.kde.screensaver /ScreenSaver Lock
+exec_always --no-startup-id picom --backend glx --experimental-backends -bc
