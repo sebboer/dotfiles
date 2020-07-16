@@ -37,6 +37,7 @@ plugins=(
   ng
   pip
   rust
+	rustup
   vi-mode-custom
   sudo
   wd
