@@ -2,7 +2,8 @@
 
 case "$1" in
     lock)
-	~/.config/scripts/lock.sh
+	#~/.config/scripts/lock.sh
+	qdbus org.freedesktop.ScreenSaver /ScreenSaver Lock
         ;;
     logout)
         i3-msg exit
