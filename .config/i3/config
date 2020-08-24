@@ -16,8 +16,8 @@ hide_edge_borders none
 
 # change borders
 bindsym $mod+u border none
-bindsym $mod+y border pixel 5
-bindsym $mod+n border normal
+bindsym $mod+n border pixel 1
+bindsym $mod+y border normal
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
@@ -456,7 +456,7 @@ gaps inner 10
 gaps outer -2
 smart_borders on
 smart_gaps on
-new_window pixel 2
+new_window pixel 1
 
 # Additionally, you can issue commands with the following syntax. This is useful to bind keys to changing the gap size.
 # gaps inner|outer current|all set|plus|minus <px>
@@ -525,6 +525,10 @@ for_window [class="(?i)*nextcloud*"] floating disable
 for_window [class="plasmashell" window_type="notification"] border none, move right 700px, move down 450px
 no_focus [class="plasmashell" window_type="notification"]
 
-bindsym $mod+Shift+d exec --no-startup-id qdbus org.kde.kglobalaccel /component/krunner_desktop org.kde.kglobalaccel.Component.invokeShortcut _launch
+#bindsym $mod+Shift+d exec --no-startup-id qdbus org.kde.kglobalaccel /component/krunner_desktop org.kde.kglobalaccel.Component.invokeShortcut _launch
 bindsym --release $mod+Shift+x exec --no-startup-id qdbus org.kde.screensaver /ScreenSaver Lock
-exec_always --no-startup-id picom --backend glx --experimental-backends -bc
+exec_always --no-startup-id ~/.config/scripts/picom-startup.sh
+for_window [class="plasmashell" window_type="notification"] move position 3090 10
+#set $menu --no-startup-id qdbus org.kde.krunner /App display
+#bindsym $mod+d exec $menu
+for_window [instance="sun-awt-X11-XWindowPeer"] border pixel 0
