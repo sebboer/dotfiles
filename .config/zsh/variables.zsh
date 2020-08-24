@@ -1,4 +1,4 @@
-export VISUAL=nvim
+export VISUAL=/usr/bin/nvim
 export EDITOR=$VISUAL
 export LANG="en_US.UTF-8"
 export LC_ALL="en_US.UTF-8"
@@ -16,3 +16,5 @@ export NNN_PLUG='s:sxiv;p:pandoc;b:bat;m:mediainf;l:less;h:hexylview;i:imgview;t
 export NNN_TRASH=1
 export PAGER=less
 export GIT_PAGER=bat
+export LC_CTYPE="en_US.UTF-8"
+export LC_ALL="en_US.UTF-8"
