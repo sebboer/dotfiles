@@ -26,7 +26,7 @@ configuration {
 /*	levenshtein-sort: false;*/
 /*	case-sensitive: false;*/
 /*	cycle: true;*/
-	sidebar-mode: true;
+	/*sidebar-mode: true;*/
 /*	eh: 1;*/
 /*	auto-select: false;*/
 /*	parse-hosts: false;*/
@@ -50,7 +50,9 @@ configuration {
 /*	window-format: "{w}    {i}{c}   {t}";*/
 /*	click-to-exit: true;*/
 /*	show-match: true;*/
-	theme: "~/.config/rofi/themes/gruvbox-dark.rasi";
+	/*theme: "~/.config/rofi/themes/gruvbox-dark.rasi";*/
+		/*theme: "~/.config/rofi/themes/slate.rasi";*/
+		theme: "~/.config/rofi/themes/breeze-dracula.rasi";
 /*	color-normal: ;*/
 /*	color-urgent: ;*/
 /*	color-active: ;*/
