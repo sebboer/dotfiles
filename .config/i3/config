@@ -372,7 +372,7 @@ exec --no-startup-id thunderbird
 exec --no-startup-id bitwarden
 exec --no-startup-id telegram-desktop
 exec --no-startup-id signal-desktop
-exec --no-startup-id alacritty -e tmux
+#exec --no-startup-id alacritty -e tmux
 
 
 # Color palette used for the terminal ( ~/.Xresources file )
