@@ -33,7 +33,7 @@ bindsym $mod+Shift+Return exec --no-startup-id alacritty --title "Floating"
 for_window [class="Alacritty" title="Floating"] floating enable; border none
 for_window [class="VirtualBox Machine"] floating disable 
 for_window [title="Desktop — Plasma"] kill; floating enable; border none
-exec --no-startup-id feh --bg-scale /usr/share/backgrounds/wallpapers-juhraya/Albero_Del_Pepe_by_Harisont.jpg
+exec --no-startup-id feh --bg-scale /usr/share/backgrounds/breath2.png
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -530,5 +530,4 @@ bindsym --release $mod+Shift+x exec --no-startup-id qdbus org.kde.screensaver /S
 exec_always --no-startup-id ~/.config/scripts/picom-startup.sh
 for_window [class="plasmashell" window_type="notification"] move position 3090 10
 #set $menu --no-startup-id qdbus org.kde.krunner /App display
-#bindsym $mod+d exec $menu
 for_window [instance="sun-awt-X11-XWindowPeer"] border pixel 0
