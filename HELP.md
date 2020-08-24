@@ -47,3 +47,6 @@
 * select controller `select <ctrl>`
 * connect device `connect [dev]` try multiple times
 * ncpamixer => check audio profile
+
+### Merge Calibre Dir
+`rsync --progress -rt ~/CalibreLibrary/ basti@<server>:/path/to/calibrelibrary`
