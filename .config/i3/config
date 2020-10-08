@@ -33,6 +33,18 @@ bindsym $mod+Shift+Return exec --no-startup-id alacritty --title "Floating"
 for_window [class="Alacritty" title="Floating"] floating enable; border none
 for_window [class="VirtualBox Machine"] floating disable 
 for_window [title="Desktop — Plasma"] kill; floating enable; border none
+
+
+############### JETBRAINS #####################################
+set $float floating enable
+set $center move position center
+for_window [class="jetbrains-phpstorm" title="win0"] $float, $center
+
+# https://github.com/i3/i3/issues/3233
+for_window [class="^jetbrains-.+"][window_type=dialog] focus
+for_window [instance="sun-awt-X11-XWindowPeer"] focus
+###############################################################
+
 exec --no-startup-id feh --bg-scale /usr/share/backgrounds/breath2.png
 
 # kill focused window
