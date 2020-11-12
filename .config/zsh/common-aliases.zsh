@@ -6,10 +6,10 @@ alias ohmyzsh="cd ~/.oh-my-zsh"
 # Exa 
 alias ls="exa --across"
 alias la="exa -lah"
-alias ll="exa -lh"
-alias l="exa -lah"
-alias lt="exa -Th"
-alias lg="exa -lh --git"
+alias ll="exa -lh -s=extension"
+alias l="exa -lah -s=extension"
+alias lt="exa -Th -s=extension"
+alias lg="exa -lh --git -s=extension"
 
 # dotfiles
 alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
