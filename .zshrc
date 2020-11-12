@@ -31,7 +31,6 @@ plugins=(
   colored-man-pages
   jsontools
   npm
-  nvm
   node
   nmap
   ng
@@ -80,9 +79,6 @@ bindkey '^e' edit-command-line
 # ZSH completion backward TAB as Shift-TAB
 bindkey '^[[Z' reverse-menu-complete
 
-# NVM
-#[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-
 # Serverless
 #source $HOME/.config/zsh/serverless.zsh
 
@@ -95,8 +91,26 @@ bindkey '^[[Z' reverse-menu-complete
 # microk8s autocompletion
 #ERROR=$(microk8s.status)
 
-#if [ $? -eq 0 ]
-#then
-	#if [ $commands[microk8s.kubectl] ]; then source <(microk8s.kubectl completion zsh | sed "s/complete -o default -F __start_kubectl kubectl/complete -o default -F __start_kubectl microk8s.kubectl/g" | sed "s/complete -o default -o nospace -F __start_kubectl kubectl/complete -o default -o nospace -F __start_kubectl microk8s.kubectl/g"); fi
-#fi
+if [ $? -eq 0 ]
+then
+	if [ $commands[microk8s.kubectl] ]; then source <(microk8s.kubectl completion zsh | sed "s/complete -o default -F __start_kubectl kubectl/complete -o default -F __start_kubectl microk8s.kubectl/g" | sed "s/complete -o default -o nospace -F __start_kubectl kubectl/complete -o default -o nospace -F __start_kubectl microk8s.kubectl/g"); fi
+fi
+
+# NVM
+## Install zsh-async if it’s not present
+if [[ ! -a ~/.zsh-async ]]; then
+  git clone git@github.com:mafredri/zsh-async.git ~/.zsh-async
+fi
+source ~/.zsh-async/async.zsh
+
+function load_nvm() {
+    [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
+    [ -s "$NVM_DIR/bash_completion" ] && . "$NVM_DIR/bash_completion"
+}
+
+# Initialize worker
+async_start_worker nvm_worker -n
+async_register_callback nvm_worker load_nvm
+async_job nvm_worker sleep 0.1
+
 compinit -d $HOME/.cache/zsh/zcompdump-$ZSH_VERSION
