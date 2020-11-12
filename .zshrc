@@ -15,14 +15,14 @@ ZSH_THEME="bira-custom"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
 	zsh-syntax-highlighting
-  aws
+  #aws
   cargo
   copydir
   copyfile
   calc
 	kubectl
   docker
-  docker-machine
+  #docker-machine
   docker-compose
   fzf
 	fzf-tab
