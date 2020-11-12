@@ -50,9 +50,7 @@ configuration {
 /*	window-format: "{w}    {i}{c}   {t}";*/
 /*	click-to-exit: true;*/
 /*	show-match: true;*/
-	/*theme: "~/.config/rofi/themes/gruvbox-dark.rasi";*/
-		/*theme: "~/.config/rofi/themes/slate.rasi";*/
-		theme: "~/.config/rofi/themes/breeze-dracula.rasi";
+		theme: "~/.config/rofi/themes/slate-mars.rasi";
 /*	color-normal: ;*/
 /*	color-urgent: ;*/
 /*	color-active: ;*/
